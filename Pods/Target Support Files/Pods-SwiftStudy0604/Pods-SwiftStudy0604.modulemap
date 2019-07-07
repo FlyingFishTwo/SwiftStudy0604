@@ -1,0 +1,6 @@
+framework module Pods_SwiftStudy0604 {
+  umbrella header "Pods-SwiftStudy0604-umbrella.h"
+
+  export *
+  module * { export * }
+}
