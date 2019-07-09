@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         array.append("分页福利")
         array.append("我的关注")
         array.append("动态九宫格")
+        array.append("tableView缓存高度")
         return array
     }()
 
@@ -55,9 +56,6 @@ class ViewController: UIViewController {
 
 
 
-
-
-
 extension ViewController :UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringArr.count
@@ -73,19 +71,23 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         if indexPath.row == 0 {
             let welfareVC = Welfare_ViewController()
-
             self.navigationController?.pushViewController(welfareVC, animated: true)
 
         }else if indexPath.row == 1 {
             let coinVC = CoinHomeViewController()
-            
             self.navigationController?.pushViewController(coinVC, animated: true)
 
         }else if indexPath.row == 2 {
             let dongtaiVC = DynamicNinePalaceLatticeVC()
             self.navigationController?.pushViewController(dongtaiVC, animated: true)
+        }else if indexPath.row == 3 {
+            let cache_VC = CacheHeightVC()
+            cache_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cache_VC.title = stringArr[indexPath.row]
+            self.navigationController?.pushViewController(cache_VC, animated: true)
         }
     }
     

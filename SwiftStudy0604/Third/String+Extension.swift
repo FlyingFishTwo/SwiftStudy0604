@@ -17,7 +17,6 @@ extension String {
         }
         return nil
     }
-    
     // base64解码
     func fromBase64() -> String? {
         if let data = Data(base64Encoded: self) {
@@ -62,3 +61,19 @@ extension String{
 
 
 
+extension String {
+    //MARK:获得string内容高度
+    func stringHeightWidth(fontSize:CGFloat,width:CGFloat) -> CGFloat {
+        let font = UIFont.systemFont(ofSize: fontSize)
+        let size = CGSize(width: width, height: CGFloat(MAXFLOAT))
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 20
+        let attributes = [kCTFontAttributeName:font,kCTParagraphStyleAttributeName:paragraphStyle]
+        let text = self as NSString
+        let rect = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes as [NSAttributedString.Key : Any], context: nil)
+        return rect.height
+    }
+    
+    
+    
+}
