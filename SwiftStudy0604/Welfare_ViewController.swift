@@ -82,7 +82,11 @@ extension Welfare_ViewController :JXSegmentedListContainerViewDataSource{
     }
     //返回遵从`JXSegmentedListContainerViewListDelegate`协议的实例
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
-        return ListBaseViewController()
+        if index != 0 {
+            return ListBaseViewController()
+        }else {
+            return Profile_ViewController()
+        }
     }
 }
 

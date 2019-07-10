@@ -9,36 +9,51 @@
 import UIKit
 import JXSegmentedView
 
+
+
 let ListBaseViewCell_ID = "ListBaseViewCell_ID"
+
 
 
 class ListBaseViewController: UIViewController {
     
     var itemsArray = [WelfareModel]()
-    
-    
+    var page :Int = 0
+
     lazy var tableView:UITableView = {
         let table = UITableView(frame: CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: Configs.Dimensions.screenHeight-40-Configs.Dimensions.topHeight), style: .plain)
-//        table.backgroundColor = UIColor.lightGray
         table.register(ListBase_Cell.self, forCellReuseIdentifier: ListBaseViewCell_ID)
         table.delegate = self
         table.dataSource = self
-        table.estimatedRowHeight = 50
+        table.estimatedRowHeight = 350
         table.rowHeight = UITableView.automaticDimension
         table.backgroundColor = UIColor.clear
         table.separatorStyle = .none
-
         return table
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getTitleData(type: MyAPI.LXFNetworkCategory.welfare, size: 10, index: 1)
-        view.backgroundColor = UIColor(red: CGFloat(arc4random()%255)/255, green: CGFloat(arc4random()%255)/255, blue: CGFloat(arc4random()%255)/255, alpha: 1)
         view.addSubview(tableView)
+        
+        //下拉刷新
+        tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
+            self?.itemsArray.removeAll()
+            self?.getTitleData(type: MyAPI.LXFNetworkCategory.welfare, size: 20, index: 0)
+        })
+        //上拉加载更多
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadmoreData))
 
+        tableView.mj_header.beginRefreshing()
+
+    
     }
+    
+    @objc func loadmoreData() {
+        page += 1
+        getTitleData(type: MyAPI.LXFNetworkCategory.welfare, size: 20, index: page)
+    }
+
 }
 
 extension ListBaseViewController: JXSegmentedListContainerViewListDelegate {
@@ -68,12 +83,22 @@ extension ListBaseViewController :UITableViewDataSource,UITableViewDelegate {
 
 extension ListBaseViewController:NetWorkToolsProtocol {
     func getTitleData(type: MyAPI.LXFNetworkCategory, size:Int, index:Int) {
+        
+        
         NetWorkTools.KL_GetDataWithRequest(type: type, size: size, index: index) { [weak self](welfareArray) in
-            CWLog(welfareArray)
+            self?.tableView.mj_header.endRefreshing()
+            
+            if welfareArray.count < 10 {
+                self?.tableView.mj_footer.endRefreshingWithNoMoreData()
+            }else{
+                self?.tableView.mj_footer.endRefreshing()
+            }
+            
             for wealmodel in welfareArray {
                 self?.itemsArray.append(wealmodel)
-                CWLog(self!.itemsArray)
             }
+            
+
             RequestLoadingPlugin().HUD.hide(animated: true, afterDelay: 0)
             self?.tableView.reloadData()
         }

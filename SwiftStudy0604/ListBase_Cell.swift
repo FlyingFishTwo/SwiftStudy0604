@@ -9,49 +9,28 @@
 import UIKit
 import SnapKit
 import Kingfisher
+import Reusable
 
-class ListBase_Cell: UITableViewCell {
+class ListBase_Cell: UITableViewCell,Reusable {
     
     var imageSize:CGSize?
     var imageNew :UIImage?
 
     var welfaModel:WelfareModel?{
         didSet{
-            
-            bigImageView.kf.setImage(with: URL(string: (welfaModel?.url!)!))
-            
-            // 根据图片的url得到一个 image
-            let url : URL = URL.init(string: welfaModel!.url!)!
-            // 初始化url图片
-            let data : NSData! = NSData(contentsOf: url)
-            //转为data类型
-            if data != nil {
-                //判断data不为空，这里是因为swift对类型要求很严，如果未空的话，会崩溃
-                imageNew = UIImage.init(data: data as Data, scale: 1)
-                //赋值图片
-                
-            }else{
-                // 否则就赋值默认图片
-                
+            if let url = URL(string: welfaModel?.url ?? "") {
+                bigImageView.kf.setImage(with: url)
             }
-            
-            CWLog(imageNew)
-           
-            //根据图片的宽度 d返回一个新的UIImage
-            
-            let newImage:UIImage = UIImage.resizeImage(image: imageNew!,newWidth:Configs.Dimensions.screenWidth - 30.0)
-
             leftLabel.text = welfaModel?.desc
             rightLabel.text = welfaModel?.type
-            addUIWithHeight(height: newImage.size.height)
-      }
+        }
     }
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-
+        addUIWithHeight()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,8 +54,6 @@ class ListBase_Cell: UITableViewCell {
         return right
     }()
 
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -91,16 +68,16 @@ class ListBase_Cell: UITableViewCell {
 
 extension ListBase_Cell {
     
-    func addUIWithHeight(height:CGFloat) {
+    func addUIWithHeight() {
         
-        self.addSubview(bigImageView)
-        self.addSubview(leftLabel)
-        self.addSubview(rightLabel)
+        contentView.addSubview(bigImageView)
+        contentView.addSubview(leftLabel)
+        contentView.addSubview(rightLabel)
 
         bigImageView.snp.makeConstraints {
-            $0.left.top.equalTo(self).offset(15)
-            $0.right.equalTo(self).offset(-15)
-            $0.height.equalTo(height)
+            $0.left.top.equalTo(contentView).offset(15)
+            $0.right.equalTo(contentView).offset(-15)
+            $0.height.equalTo(400)
         }
         
         leftLabel.snp.makeConstraints {
@@ -108,7 +85,7 @@ extension ListBase_Cell {
             $0.right.equalTo(bigImageView.snp_centerX).offset(-15)
             $0.top.equalTo(bigImageView.snp_bottom).offset(10)
             $0.height.equalTo(30)
-            $0.bottom.equalTo(self.snp_bottom).offset(-15)
+            $0.bottom.equalTo(contentView.snp_bottom).offset(-15)
         }
         rightLabel.snp.makeConstraints {
             $0.right.equalTo(bigImageView)

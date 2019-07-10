@@ -12,9 +12,7 @@ import ObjectMapper
 import SwiftyJSON
 
 struct Internet:HandyJSON,Mappable {
-    init() {
-        
-    }
+    init() {}
     
     init?(map: Map) {
     }

@@ -56,23 +56,23 @@ class Cache_Cell: UITableViewCell,Reusable {
     }()
     
     lazy var titleLabel:UILabel = {
-        let name = UILabel()
-        name.textAlignment = .left
-        return name
+        let title = UILabel()
+        title.textAlignment = .left
+        title.textColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
+        return title
     }()
     
     lazy var contentLabel:UILabel = {
         let content = UILabel()
         content.textAlignment = .left
         content.numberOfLines = 0
-//        content.adjustsFontSizeToFitWidth = true
-//        content.lineBreakMode = NSLineBreakMode.byTruncatingTail
-//        content.sizeToFit()
+        content.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         return content
     }()
     lazy var usernameLabel:UILabel = {
         let username = UILabel()
         username.textAlignment = .left
+        username.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         return username
     }()
     lazy var timeLabel:UILabel = {

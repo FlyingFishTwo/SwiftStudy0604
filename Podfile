@@ -19,11 +19,11 @@ pod 'SnapKit'
 pod 'Kingfisher'
 pod 'MBProgressHUD'
 pod 'Reusable'
+pod 'MJRefresh'
+
 
 pod 'Then'
 pod 'IBAnimatable'  # AnimatableButton
-pod 'ImagePicker'
-pod 'Lightbox'
 
 
 

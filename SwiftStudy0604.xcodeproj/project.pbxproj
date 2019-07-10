@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0911D77122D43FD7005ACD19 /* Profile_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911D77022D43FD7005ACD19 /* Profile_ViewController.swift */; };
 		0932A6AB22C85EED001CE760 /* CoinHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932A6AA22C85EED001CE760 /* CoinHomeViewController.swift */; };
 		0932A6B222C87C92001CE760 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932A6B122C87C92001CE760 /* String+Extension.swift */; };
 		093C759B22CF3BFC00C7BE9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0911D77022D43FD7005ACD19 /* Profile_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_ViewController.swift; sourceTree = "<group>"; };
 		0932A6AA22C85EED001CE760 /* CoinHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHomeViewController.swift; sourceTree = "<group>"; };
 		0932A6B122C87C92001CE760 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0911D76F22D43FA6005ACD19 /* 多控制器加刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				0911D77022D43FD7005ACD19 /* Profile_ViewController.swift */,
+			);
+			path = "多控制器加刷新";
+			sourceTree = "<group>";
+		};
 		0932A6AC22C87C4C001CE760 /* Third */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +263,7 @@
 		09D62F7A22A5CA090061E661 /* SwiftStudy0604 */ = {
 			isa = PBXGroup;
 			children = (
+				0911D76F22D43FA6005ACD19 /* 多控制器加刷新 */,
 				0978BC9822D0E49600637456 /* 缓存高度 */,
 				0978BC7B22D07D1000637456 /* 动态九宫格 */,
 				09D5ADD422CA139B00D62790 /* NetWorkTools */,
@@ -531,6 +542,7 @@
 			files = (
 				093C759B22CF3BFC00C7BE9A /* NetworkManager.swift in Sources */,
 				0932A6B222C87C92001CE760 /* String+Extension.swift in Sources */,
+				0911D77122D43FD7005ACD19 /* Profile_ViewController.swift in Sources */,
 				09CDFE0522C4C15A00D9718D /* UIImage+Extension.swift in Sources */,
 				0978BC9A22D0E4A400637456 /* CacheHeightVC.swift in Sources */,
 				09D5ADCF22C9FA3100D62790 /* CoinView_Cell.swift in Sources */,
