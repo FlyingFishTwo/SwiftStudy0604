@@ -67,13 +67,23 @@ extension String {
         let font = UIFont.systemFont(ofSize: fontSize)
         let size = CGSize(width: width, height: CGFloat(MAXFLOAT))
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 20
+        paragraphStyle.lineSpacing = 3
         let attributes = [kCTFontAttributeName:font,kCTParagraphStyleAttributeName:paragraphStyle]
         let text = self as NSString
         let rect = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes as [NSAttributedString.Key : Any], context: nil)
         return rect.height
     }
     
-    
+    func king_getHeightWithString(string:String,width:CGFloat) -> CGFloat{
+        
+        let options : NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
+        let boundingRect = string.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)),
+                                                       options: options, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 13)],
+                                                       context: nil)
+
+        return boundingRect.height
+    }
     
 }
+
+

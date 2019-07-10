@@ -33,7 +33,7 @@ class Profile_ViewController: UIViewController {
         view.addSubview(tableView)
         tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
             self?.dataArray.removeAll()
-            self?.getTitleDataALL(type: MyAPI.LXFNetworkCategory.all, size: 20, index: self!.page)
+            self?.getTitleDataALL(type: MyAPI.LXFNetworkCategory.all, size: 20, index: 1)
         })
         tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(lodaMoreData_All))
         tableView.mj_header.beginRefreshing()

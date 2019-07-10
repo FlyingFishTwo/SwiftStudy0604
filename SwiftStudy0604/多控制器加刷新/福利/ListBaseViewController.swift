@@ -35,7 +35,7 @@ class ListBaseViewController: UIViewController {
         //下拉刷新
         tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
             self?.itemsArray.removeAll()
-            self?.getTitleData(type: MyAPI.LXFNetworkCategory.welfare, size: 20, index: self!.page)
+            self?.getTitleData(type: MyAPI.LXFNetworkCategory.welfare, size: 20, index: 1)
         })
         //上拉加载更多
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadmoreData))

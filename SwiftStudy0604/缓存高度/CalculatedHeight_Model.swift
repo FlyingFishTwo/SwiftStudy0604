@@ -41,7 +41,7 @@ struct CalculatedHeight_Model {
         let username_Y: CGFloat = headImageViewRect.minY + 5
         let username_W = Configs.Dimensions.screenWidth - headImageViewRect.maxX - 30
         guard let modelUserName = model.username else { return  }
-        let username_H = modelUserName.stringHeightWidth(fontSize: 13.0, width: username_W)
+        let username_H = modelUserName.king_getHeightWithString(string: modelUserName, width: username_W)
         usernameLabelRect = CGRect(x: username_X, y: username_Y, width: username_W, height: username_H+10)
 
         //titleLabel 的坐标
@@ -49,7 +49,7 @@ struct CalculatedHeight_Model {
         let titleLabel_Y: CGFloat = usernameLabelRect.maxY + 10
         let titleLabel_W = usernameLabelRect.width
         guard let titleLabelName = model.title else { return  }
-        let titleLabel_H = titleLabelName.stringHeightWidth(fontSize: 13.0, width: titleLabel_W)
+        let titleLabel_H = titleLabelName.king_getHeightWithString(string: titleLabelName, width: titleLabel_W)
         titleLabelRect = CGRect(x: titleLabel_X, y: titleLabel_Y, width: titleLabel_W, height: titleLabel_H)
 
         
@@ -58,7 +58,7 @@ struct CalculatedHeight_Model {
         let timeLabel_Y: CGFloat = titleLabelRect.maxY + 10
         let timeLabel_W = titleLabelRect.width
         guard let timeLabellName = model.time else { return  }
-        let timeLabel_H = timeLabellName.stringHeightWidth(fontSize: 13.0, width: timeLabel_W)
+        let timeLabel_H = timeLabellName.king_getHeightWithString(string: timeLabellName, width: timeLabel_W)
         timeLabelRect = CGRect(x: timeLabel_X, y: timeLabel_Y, width: timeLabel_W, height: timeLabel_H)
 
         
@@ -67,15 +67,18 @@ struct CalculatedHeight_Model {
         let contentLabel_Y: CGFloat = headImageViewRect.maxY + 10
         let contentLabel_W = Configs.Dimensions.screenWidth - 30
         guard let contentLabellM = model.content else { return  }
-        let contentLabel_H = contentLabellM.stringHeightWidth(fontSize: 13.0, width: contentLabel_W)
+        let contentLabel_H = contentLabellM.king_getHeightWithString(string: contentLabellM, width: contentLabel_W)
         contentLabelRect = CGRect(x: contentLabel_X, y: contentLabel_Y, width: contentLabel_W, height: contentLabel_H)
 
-
+        
+        
         if model.content?.isEmpty == true {
             cellHeight = headImageViewRect.maxY + margin
+            contentLabelRect = CGRect.zero
         }else {
-            cellHeight = contentLabelRect.maxY + margin - 5
+            cellHeight = contentLabelRect.maxY + margin
         }
+        
         
     }
     

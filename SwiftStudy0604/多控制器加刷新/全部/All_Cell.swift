@@ -130,7 +130,7 @@ extension All_Cell {
         lineView.snp.makeConstraints {
             $0.left.equalTo(whoLabel)
             $0.right.equalTo(contentView.snp.right)
-            $0.bottom.equalTo(contentView.snp.bottom).offset(-10)
+            $0.bottom.equalTo(contentView.snp.bottom)
             $0.height.equalTo(1)
         }
 
