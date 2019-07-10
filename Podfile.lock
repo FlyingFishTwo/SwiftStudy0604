@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - FSPagerView (0.8.2)
   - HandyJSON (5.0.0)
   - IBAnimatable (6.0.0)
   - JXCategoryView (1.3.14)
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FSPagerView
   - HandyJSON
   - IBAnimatable
   - JXCategoryView
@@ -62,6 +64,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FSPagerView
     - HandyJSON
     - IBAnimatable
     - JXCategoryView
@@ -85,6 +88,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   IBAnimatable: d49f9fee0c401b5b08d31b77256b77fb067e0e92
   JXCategoryView: 008a9d2eb3ba6035eb2df9a2b3e9a4806d6601a3
@@ -106,6 +110,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 0e5eb2e296587508f82c84d33db6cf4788559958
+PODFILE CHECKSUM: 404b1aaab1119bcfcb1dc5f410e30c30985bdc37
 
 COCOAPODS: 1.7.3

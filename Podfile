@@ -21,6 +21,8 @@ pod 'MBProgressHUD'
 pod 'Reusable'
 pod 'MJRefresh'
 
+pod 'FSPagerView'
+
 
 pod 'Then'
 pod 'IBAnimatable'  # AnimatableButton

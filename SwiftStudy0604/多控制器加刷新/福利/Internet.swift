@@ -67,9 +67,7 @@ struct User_Auth_Info :HandyJSON {
 }
 
 struct WelfareModel:HandyJSON {
-    init() {
-        
-    }
+    init() {}
     
     
     var desc: String?
@@ -82,6 +80,9 @@ struct WelfareModel:HandyJSON {
     var publishedAt: String?
     var type: String?
     
+    
+    var images: Array<String>?
+
     init(jsonData: JSON) {
         
         desc = jsonData["desc"].stringValue
@@ -93,6 +94,7 @@ struct WelfareModel:HandyJSON {
         source = jsonData["source"].stringValue
         publishedAt = jsonData["publishedAt"].stringValue
         type = jsonData["type"].stringValue
+        images = jsonData["images"].arrayObject as? Array<String>
 
     }
 
