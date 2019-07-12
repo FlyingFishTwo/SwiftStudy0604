@@ -18,7 +18,8 @@ struct CacheModel :HandyJSON {
     var username:String?
     var time:String?
     var imageURL:String?
-    
+    var images:Array<URL>?
+
     init() {
         
     }
@@ -29,8 +30,8 @@ struct CacheModel :HandyJSON {
         username = jsonData["username"].stringValue
         time = jsonData["time"].stringValue
         imageURL = jsonData["imageURL"].stringValue
-        
-        
+        images = jsonData["imageURL"].arrayObject as? Array<URL>
+
         
     }
     

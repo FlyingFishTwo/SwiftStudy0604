@@ -59,7 +59,7 @@ class Cache_Cell: UITableViewCell,Reusable {
         let title = UILabel()
         title.textAlignment = .left
         title.textColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
-        title.font = UIFont.systemFont(ofSize: 13.0)
+        title.font = UIFont(name: Configs.Dimensions.wordRegular, size: 13.0)
 
         return title
     }()
@@ -70,7 +70,7 @@ class Cache_Cell: UITableViewCell,Reusable {
         content.numberOfLines = 0
         content.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
 //        content.backgroundColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
-        content.font = UIFont.systemFont(ofSize: 13.0)
+        content.font = UIFont(name: Configs.Dimensions.wordRegular, size: 13.0)
         content.lineBreakMode = NSLineBreakMode.byWordWrapping
 
         content.sizeToFit()

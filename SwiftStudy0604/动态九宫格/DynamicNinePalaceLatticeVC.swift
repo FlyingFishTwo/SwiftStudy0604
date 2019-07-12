@@ -32,7 +32,6 @@ class DynamicNinePalaceLatticeVC: UIViewController {
        let table = UITableView(frame: CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: Configs.Dimensions.screenHeight), style: .plain )
         table.delegate = self
         table.dataSource = self
-        table.register(UINib.init(nibName: "KL_DynamicNineCell", bundle: nil)   , forCellReuseIdentifier: "KL_DynamicNineCell")
         table.register(cellType: KL_DynamicNineCell.self)
         table.tableFooterView = UIView()
         table.rowHeight = UITableView.automaticDimension

@@ -74,11 +74,11 @@ extension String {
         return rect.height
     }
     
-    func king_getHeightWithString(string:String,width:CGFloat) -> CGFloat{
+    func king_getHeightWithString(string:String,width:CGFloat, size:CGFloat = 13) -> CGFloat{
         
         let options : NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         let boundingRect = string.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)),
-                                                       options: options, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 13)],
+                                               options: options, attributes: [NSAttributedString.Key.font:UIFont(name: Configs.Dimensions.wordRegular, size: size)],
                                                        context: nil)
 
         return boundingRect.height

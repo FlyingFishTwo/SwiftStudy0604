@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         array.append("我的关注")
         array.append("动态九宫格")
         array.append("tableView缓存高度")
+        array.append("轮播图_朋友圈缓存高度")
         return array
     }()
 
@@ -88,6 +89,13 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource {
             cache_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             cache_VC.title = stringArr[indexPath.row]
             self.navigationController?.pushViewController(cache_VC, animated: true)
+        }else if indexPath.row == 4 {
+            
+            let banner_VC = BannerViewController()
+            banner_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            banner_VC.title = stringArr[indexPath.row]
+            self.navigationController?.pushViewController(banner_VC, animated: true)
+            
         }
     }
     

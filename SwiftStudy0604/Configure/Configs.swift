@@ -22,7 +22,18 @@ struct Configs {
         static let naviBarHeight: CGFloat = 44
         //导航栏加状态栏高度
         static let topHeight: CGFloat = statusBarHeight + naviBarHeight
+        // 常规 字体
+        static let wordRegular :String  = "PingFangSC-Regular"
+        static let word_Medium :String  = "PingFangSC-Medium"
+        static let word_Semibold :String  = "PingFangSC-Semibold"
+        static let word_Bold :String  = "PingFangSC-Bold"
 
+        //CollectionView Item的最小间距
+        static let minimum_Spacing: CGFloat = 3
+
+
+        
+        
     }
     
 }
