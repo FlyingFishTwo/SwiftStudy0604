@@ -28,6 +28,7 @@ struct KingModel:HandyJSON {
     var username: String?
     var time: String?
     var imageURL: String?
+    var isUnflod: Bool? = false
 
     var images: Array<String>?
     
@@ -38,6 +39,7 @@ struct KingModel:HandyJSON {
         username = jsonData["username"].stringValue
         time = jsonData["time"].stringValue
         imageURL = jsonData["imageURL"].stringValue
+        isUnflod = jsonData["isUnflod"].boolValue
 
         images = jsonData["images"].arrayObject as? Array<String>
         

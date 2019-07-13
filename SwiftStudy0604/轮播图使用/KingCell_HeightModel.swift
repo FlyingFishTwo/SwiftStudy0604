@@ -41,6 +41,9 @@ struct KingCell_HeightModel {
         let headImage_H: CGFloat = 100
         headImageViewRect = CGRect(x: headImage_X, y: headImage_Y, width: headImage_W, height: headImage_H)
 
+        /*******************************************
+         如果只是缓存高度，和高度无关的其他控件可以使用自动布局
+         *************************************************/
         // usernameLabel 的坐标
 //        let username_X: CGFloat = headImageViewRect.maxX + margin
 //        let username_Y: CGFloat = headImageViewRect.minY + 5
@@ -80,7 +83,7 @@ struct KingCell_HeightModel {
         // collection的坐标
         let collection_X: CGFloat = headImageViewRect.minX
         let collection_Y: CGFloat = contentLabelRect.maxY + 10
-        let collection_W: CGFloat = Configs.Dimensions.screenWidth - headImageViewRect.minX*2
+        let collection_W: CGFloat = Configs.Dimensions.screenWidth - headImageViewRect.minX*2 - 100
         let collection_H: CGFloat = collection_W
         
         
@@ -111,12 +114,10 @@ struct KingCell_HeightModel {
                                      y: collection_Y,
                                      width: collection_W,
                                      height: collection_H)
-            
         }
         else{
             collectionVRect = CGRect.zero
         }
-
 
         
         cellHeight = collectionVRect.maxY + margin

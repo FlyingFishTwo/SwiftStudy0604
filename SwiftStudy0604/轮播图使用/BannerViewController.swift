@@ -12,8 +12,6 @@ import SwiftyJSON
 
 class BannerViewController: UIViewController {
     
-    var isExpand: Bool = false
-    var expandingStateArray: [Bool] = []
 
     //朋友圈数据源
     var dataArray = [KingCell_HeightModel]()
@@ -52,7 +50,6 @@ class BannerViewController: UIViewController {
         table.dataSource = self
         table.register(cellType: Banner_Cell.self)
         table.tableFooterView = UIView()
-        table.allowsSelection = false
         table.separatorInset = .zero
 
 //        table.estimatedRowHeight = 50
@@ -69,11 +66,7 @@ class BannerViewController: UIViewController {
         // 获取数据
         getDataWithBound()
         view.addSubview(tableView)
-        for _ in 0..<dataArray.count {
-            let bool = false
-            expandingStateArray.append(bool)
-        }
-        
+
     }
     
 }
@@ -91,24 +84,9 @@ extension BannerViewController :UITableViewDataSource,UITableViewDelegate {
         cell.delegate = self
         cell.closureBtn.tag = indexPath.row
 
-//        if expandingStateArray[indexPath.row] {
-//            cell.titleLabel.numberOfLines = 0
-//            cell.closureBtn.setTitle("闭合", for: .normal)
-//        }else{
-//            cell.titleLabel.numberOfLines = 2
-//            cell.closureBtn.setTitle("展开", for: .normal)
-//        }
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//
-//        if let btnCell = cell as? Banner_Cell  {
-//            let labelIsTruncated: Bool = btnCell.titleLabel.isTruncated()
-//            btnCell.closureBtn.isHidden = !labelIsTruncated
-//        }
-//    }
-
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -122,22 +100,6 @@ extension BannerViewController :UITableViewDataSource,UITableViewDelegate {
     
 }
 
-extension UILabel {
-    
-    func countLabelLines() -> Int {
-        self.layoutIfNeeded()
-        let myText = self.text! as NSString
-        let attributes = [NSAttributedString.Key.font : self.font!]
-        let labelSize = myText.boundingRect(with: CGSize(width: Configs.Dimensions.screenWidth, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
-        return Int(ceil(CGFloat(labelSize.height) / self.font.lineHeight))
-    }
-    func isTruncated() -> Bool {
-        if (self.countLabelLines() > self.numberOfLines) {
-            return true
-        }
-        return false
-    }
-}
 
 
 
