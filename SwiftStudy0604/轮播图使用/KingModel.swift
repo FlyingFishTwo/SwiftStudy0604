@@ -39,7 +39,7 @@ struct KingModel:HandyJSON {
         username = jsonData["username"].stringValue
         time = jsonData["time"].stringValue
         imageURL = jsonData["imageURL"].stringValue
-        isOpen = jsonData["isOpen"].boolValue
+//        isOpen = jsonData["isOpen"].boolValue
 
         images = jsonData["images"].arrayObject as? Array<String>
         

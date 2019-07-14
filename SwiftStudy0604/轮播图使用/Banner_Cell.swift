@@ -41,10 +41,12 @@ class Banner_Cell: UITableViewCell,Reusable {
             
             //坐标赋值
             headImageV.frame = king?.headImageViewRect ?? CGRect.zero
-//            userNameLabel.frame = king!.usernameLabelRect
-            titleLabel.frame = king!.titleLabelRect
-//            timeLabel.frame = king!.timeLabelRect
-            contentLabel.frame = king!.contentLabelRect
+            headImageV.setMutiBorderRoundingCorners(headImageV, corner: 10, rect: headImageV.bounds)
+
+//            userNameLabel.frame = king?.usernameLabelRect ?? CGRect.zero
+            titleLabel.frame = king?.titleLabelRect ?? CGRect.zero
+//            timeLabel.frame = king?.timeLabelRect ?? CGRect.zero
+            contentLabel.frame = king?.contentLabelRect ?? CGRect.zero
 
             //计算 CollectionView  item 的大小 和间距
             collectionView.frame = king?.collectionVRect ?? CGRect.zero
@@ -95,7 +97,7 @@ class Banner_Cell: UITableViewCell,Reusable {
     //标题
     lazy var titleLabel = UILabel().then {
         $0.font = UIFont(name: Configs.Dimensions.wordRegular, size: 13.0)
-        $0.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        $0.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         $0.textAlignment = .left
 //        $0.backgroundColor = UIColor.lightGray
 
@@ -110,7 +112,7 @@ class Banner_Cell: UITableViewCell,Reusable {
     //时间
     lazy var timeLabel = UILabel().then {
         $0.font = UIFont(name: Configs.Dimensions.wordRegular, size: 13.0)
-        $0.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        $0.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         $0.textAlignment = .left
 //        $0.backgroundColor = UIColor.lightGray
 
@@ -126,8 +128,6 @@ class Banner_Cell: UITableViewCell,Reusable {
     //头像
     lazy var headImageV = UIImageView().then{
         $0.backgroundColor = UIColor.lightGray
-        $0.clipsToBounds = true
-        $0.layer.cornerRadius = 5
     }
     
 

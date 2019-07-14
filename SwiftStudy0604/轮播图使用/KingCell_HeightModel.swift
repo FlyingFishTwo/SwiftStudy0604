@@ -10,29 +10,40 @@ import Foundation
 
 struct KingCell_HeightModel {
     
-    var model: KingModel?
-    
+    var model: KingModel? {
+        didSet {
+            configRect()
+        }
+    }
     var headImageViewRect: CGRect!
     var usernameLabelRect: CGRect!
     var timeLabelRect: CGRect!
     var titleLabelRect: CGRect!
     var contentLabelRect: CGRect!
     var collectionVRect: CGRect!
-
     
     var cellHeight: CGFloat?
     
+    
     init(model:KingModel) {
         self.model = model
+        configRect()
+    }
+    
+    mutating func configRect() {
+        
+        guard let model = self.model else {
+            return
+        }
         
         let margin: CGFloat = 15
         guard model.imageURL != nil else {
             headImageViewRect = CGRect.zero
             return
         }
-//        guard model.images?.count == 0 else {
-//            return
-//        }
+        //        guard model.images?.count == 0 else {
+        //            return
+        //        }
         
         // headerImageView的坐标
         let headImage_X: CGFloat = 15
@@ -40,7 +51,7 @@ struct KingCell_HeightModel {
         let headImage_W: CGFloat = 50
         let headImage_H: CGFloat = 50
         headImageViewRect = CGRect(x: headImage_X, y: headImage_Y, width: headImage_W, height: headImage_H)
-
+        
         /*******************************************
          如果只是缓存高度，和高度无关的其他控件可以使用自动布局   *************************************************/
         
@@ -59,7 +70,7 @@ struct KingCell_HeightModel {
         guard let titleM = model.title else { return  }
         let title_H = titleM.king_getHeightWithString(string: titleM, width: title_W)
         titleLabelRect = CGRect(x: title_X, y: title_Y, width: title_W, height: title_H)
-
+        
         // contentLabel 的坐标
         let contentLabel_X: CGFloat = usernameLabelRect.minX
         let contentLabel_Y: CGFloat = headImageViewRect.maxY + 10
@@ -68,7 +79,7 @@ struct KingCell_HeightModel {
         
         // 展开的时候的高度
         var contentLabel_H = contentM.king_getHeightWithString(string: contentM, width: contentLabel_W)
-        // 闭合的时候的高度  显示两行
+        // 闭合的时候的高度
         let onelineH = "".king_getHeightWithString(string: "", width: contentLabel_W)
         
         if model.isOpen == false {
@@ -80,14 +91,9 @@ struct KingCell_HeightModel {
         }else{
             contentLabel_H = contentM.king_getHeightWithString(string: contentM, width: contentLabel_W)
         }
-
+        
         
         contentLabelRect = CGRect(x: contentLabel_X, y: contentLabel_Y, width: contentLabel_W, height: contentLabel_H)
-
-
-        
-        
-        
         
         
         
@@ -132,12 +138,15 @@ struct KingCell_HeightModel {
         else{
             collectionVRect = CGRect.zero
         }
-
         
-        cellHeight = collectionVRect.maxY + margin
+        if collectionVRect == CGRect.zero {
+            cellHeight = contentLabelRect.maxY + margin
+        }
+        else{
+            cellHeight = collectionVRect.maxY + margin
+        }
         
     }
-    
     
     
 }

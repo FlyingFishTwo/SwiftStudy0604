@@ -93,8 +93,7 @@ extension BannerViewController :UITableViewDataSource,UITableViewDelegate {
         let model = dataArray[indexPath.row]
         return model.cellHeight ?? 0
     }
-    
-    
+
 }
 
 
@@ -112,26 +111,14 @@ extension BannerViewController : CloseClickBtnDelegate{
             return
         }
         
-        if dataM.isOpen == false {
-            dataM.isOpen = true
-            CWLog("dataM.isOpen ------\(dataM.isOpen)")
-
-        }else{
-            dataM.isOpen = false
-
-            CWLog("dataM.isOpen ------\(dataM.isOpen)")
-
-        }
-//        dataM.isOpen = !dataM.isOpen
+        dataM.isOpen = !dataM.isOpen
         model_Frame.model = dataM
+        // 很重要，一定要把model  还给数据源
+        dataArray[(indexPath.row)] = model_Frame
         
-        CWLog("dataM.isOpen ------\(dataM.isOpen)")
-
-        cell.layoutIfNeeded()
-
-
-        tableView.reloadRows(at: [indexPath], with: .automatic)
-
+        UIView.performWithoutAnimation {
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
     }
 
 }

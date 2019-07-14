@@ -25,12 +25,14 @@ class Banner_HeaderView: UIView {
     lazy var pageControl = FSPageControl()
     
     
-    init(frame: CGRect,dataArray:Array<Any>) {
+    init(frame: CGRect, dataArray:Array<Any>?) {
         super.init(frame: frame)
-
-        self.imageArray = dataArray as! [URL]
-         configureWithPageView_PageControl()
-        
+        if let array = dataArray {
+            self.imageArray = array as! [URL]
+            configureWithPageView_PageControl()
+        }else{
+            
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -13,12 +13,13 @@ extension UIView {
     /**
      * 设置uiview 的任意圆角
      **/
-    func setMutiBorderRoundingCorners(_ view:UIView,corner:CGFloat) {
-        let maskPath = UIBezierPath.init(roundedRect: view.bounds,
+    func setMutiBorderRoundingCorners(_ view:UIView,corner:CGFloat,rect:CGRect) {
+//        let rect = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let maskPath = UIBezierPath.init(roundedRect: rect,
                                          byRoundingCorners: [UIRectCorner.bottomLeft, UIRectCorner.topRight],
                                          cornerRadii: CGSize(width: corner, height: corner))
         let maskLayer = CAShapeLayer()
-        maskLayer.frame = view.bounds
+        maskLayer.frame = rect
         maskLayer.path = maskPath.cgPath
         view.layer.mask = maskLayer
     }
