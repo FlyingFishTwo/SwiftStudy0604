@@ -11,20 +11,17 @@ import Reusable
 import Then
 import Kingfisher
 import SnapKit
-import RxSwift
 
 
-@objc protocol  CloseClickBtnDelegate :NSObjectProtocol{
+protocol  CloseClickBtnDelegate :NSObjectProtocol{
     
-    func clickWithCell(cell:Banner_Cell,button:UIButton)
+    func clickWithCell(cell:Banner_Cell)
     
 
     
 }
 
 class Banner_Cell: UITableViewCell,Reusable {
-    
-    let disposeBag = DisposeBag()
     
     ///声明代理
     weak var delegate : CloseClickBtnDelegate?
@@ -45,7 +42,7 @@ class Banner_Cell: UITableViewCell,Reusable {
             //坐标赋值
             headImageV.frame = king?.headImageViewRect ?? CGRect.zero
 //            userNameLabel.frame = king!.usernameLabelRect
-//            titleLabel.frame = king!.titleLabelRect
+            titleLabel.frame = king!.titleLabelRect
 //            timeLabel.frame = king!.timeLabelRect
             contentLabel.frame = king!.contentLabelRect
 
@@ -100,6 +97,8 @@ class Banner_Cell: UITableViewCell,Reusable {
         $0.font = UIFont(name: Configs.Dimensions.wordRegular, size: 13.0)
         $0.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         $0.textAlignment = .left
+//        $0.backgroundColor = UIColor.lightGray
+
     }
     //用户名
     lazy var userNameLabel = UILabel().then {
@@ -113,6 +112,8 @@ class Banner_Cell: UITableViewCell,Reusable {
         $0.font = UIFont(name: Configs.Dimensions.wordRegular, size: 13.0)
         $0.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         $0.textAlignment = .left
+//        $0.backgroundColor = UIColor.lightGray
+
     }
     //文本
     lazy var contentLabel = UILabel().then {
@@ -120,12 +121,13 @@ class Banner_Cell: UITableViewCell,Reusable {
         $0.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         $0.textAlignment = .left
         $0.numberOfLines = 0
+        $0.backgroundColor = #colorLiteral(red: 0.8705882353, green: 0.8705882353, blue: 0.8705882353, alpha: 1)
     }
     //头像
     lazy var headImageV = UIImageView().then{
         $0.backgroundColor = UIColor.lightGray
         $0.clipsToBounds = true
-        $0.layer.cornerRadius = 15
+        $0.layer.cornerRadius = 5
     }
     
 
@@ -143,12 +145,10 @@ class Banner_Cell: UITableViewCell,Reusable {
     })
     
     @objc func buttonClick(event:UIButton) {
-        
-        //判断代理 是不是这个方法，在  protocol 前加   @objc
-        if self.delegate != nil && (self.delegate?.responds(to: #selector(self.delegate?.clickWithCell(cell:button:))))!{ // 判断代理是否实现 实现走代理方法
-            self.delegate?.clickWithCell(cell: self, button: event)
+        guard let cusDelegate = delegate else {
+            return
         }
-
+        cusDelegate.clickWithCell(cell: self)
     }
 
     //懒加载图片
@@ -218,19 +218,15 @@ extension Banner_Cell {
             make.left.equalTo(headImageV.snp.right).offset(15)
             make.top.equalTo(headImageV.snp.top).offset(5)
         }
-        titleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(userNameLabel)
-            make.top.equalTo(userNameLabel.snp.bottom).offset(5)
-        }
         timeLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(userNameLabel)
-            make.top.equalTo(titleLabel.snp.bottom).offset(5)
+            make.left.equalTo(userNameLabel.snp.right).offset(10.0)
+            make.top.equalTo(userNameLabel)
         }
 
         closureBtn.snp.makeConstraints { (make) in
             make.right.equalTo(contentView).offset(-15)
-            make.centerY.equalTo(timeLabel)
-            make.size.equalTo(CGSize(width: 100, height: 30))
+            make.bottom.equalTo(titleLabel)
+            make.size.equalTo(CGSize(width: 50, height: 30))
         }
     }
 }

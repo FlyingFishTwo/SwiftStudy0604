@@ -32,8 +32,6 @@ class BannerViewController: UIViewController {
         darr.append(URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1562945263&di=8046ae264dd1e32fdb97bce1f2dfc9ad&src=http://pic19.nipic.com/20120310/8853864_130132914000_2.jpg")!)
         darr.append(URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1562945457&di=32590b08dacc0ff83fc3914ce54d89a1&src=http://pic22.nipic.com/20120627/387472_170953463126_2.jpg")!)
         darr.append(URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1562945457&di=65f8f08a3ab6cad71c7ecd49c0ade49c&src=http://pic27.nipic.com/20130126/10068494_204540170180_2.jpg")!)
-        
-        
         darr.append(URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1562945457&di=927360f1ed0c6ddf9085eeaad52ed6ff&src=http://pic1.nipic.com/2009-02-24/200922482815876_2.jpg")!)
         darr.append(URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1562945457&di=314e9651190eb756ece3548fbc487683&src=http://pic38.nipic.com/20140222/18047040_212020215155_2.jpg")!)
 
@@ -50,7 +48,6 @@ class BannerViewController: UIViewController {
         table.dataSource = self
         table.register(cellType: Banner_Cell.self)
         table.tableFooterView = UIView()
-        table.separatorInset = .zero
 
 //        table.estimatedRowHeight = 50
 //        table.rowHeight = 230
@@ -66,6 +63,7 @@ class BannerViewController: UIViewController {
         // 获取数据
         getDataWithBound()
         view.addSubview(tableView)
+        
 
     }
     
@@ -82,8 +80,7 @@ extension BannerViewController :UITableViewDataSource,UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: Banner_Cell.self)
         cell.king = dataArray[indexPath.row]
         cell.delegate = self
-        cell.closureBtn.tag = indexPath.row
-
+        
         return cell
     }
     
@@ -102,16 +99,41 @@ extension BannerViewController :UITableViewDataSource,UITableViewDelegate {
 
 
 
-
+// MARK:  cell 的代理方法
 extension BannerViewController : CloseClickBtnDelegate{
     
-    func clickWithCell(cell: Banner_Cell, button: UIButton) {
+    func clickWithCell(cell: Banner_Cell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else{
+            return
+        }
+        var model_Frame = dataArray[(indexPath.row)]
+        guard var dataM = model_Frame.model else {
+            return
+        }
+        
+        if dataM.isOpen == false {
+            dataM.isOpen = true
+            CWLog("dataM.isOpen ------\(dataM.isOpen)")
+
+        }else{
+            dataM.isOpen = false
+
+            CWLog("dataM.isOpen ------\(dataM.isOpen)")
+
+        }
+//        dataM.isOpen = !dataM.isOpen
+        model_Frame.model = dataM
+        
+        CWLog("dataM.isOpen ------\(dataM.isOpen)")
+
+        cell.layoutIfNeeded()
 
 
+        tableView.reloadRows(at: [indexPath], with: .automatic)
 
     }
-    
-    
+
 }
 
 // MARK:获取数据

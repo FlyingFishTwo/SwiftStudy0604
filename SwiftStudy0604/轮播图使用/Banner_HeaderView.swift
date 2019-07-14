@@ -48,6 +48,7 @@ extension Banner_HeaderView {
         pagerView.delegate = self
         pagerView.automaticSlidingInterval =  3
         pagerView.isInfinite = true
+        pagerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         // 枚举，可以h根据需求选择想要的效果
         pagerView.transformer = FSPagerViewTransformer(type: .linear)
         pagerView.interitemSpacing = 15  // 两张图片之间的间距
