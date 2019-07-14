@@ -84,7 +84,6 @@ extension BannerViewController :UITableViewDataSource,UITableViewDelegate {
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -115,7 +114,6 @@ extension BannerViewController : CloseClickBtnDelegate{
         model_Frame.model = dataM
         // 很重要，一定要把model  还给数据源
         dataArray[(indexPath.row)] = model_Frame
-        
         UIView.performWithoutAnimation {
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }

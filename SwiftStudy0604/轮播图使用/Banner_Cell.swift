@@ -14,10 +14,8 @@ import SnapKit
 
 
 protocol  CloseClickBtnDelegate :NSObjectProtocol{
-    
+    //按钮点击方法
     func clickWithCell(cell:Banner_Cell)
-    
-
     
 }
 
@@ -34,18 +32,26 @@ class Banner_Cell: UITableViewCell,Reusable {
             titleLabel.text = king?.model?.title
             timeLabel.text = king?.model?.time
             contentLabel.text = king?.model?.content
-
-//            guard king?.model?.images?.count == 0 else {
-//                return
-//            }
             
+            //设置超过规定的行数 隐藏按钮
+            if king?.isMoreThanOneLine == false {
+                closureBtn.isHidden = false
+            }else{
+                closureBtn.isHidden = true
+            }
+            //设置关闭展开按钮
+            if king?.model?.isOpen == false {
+                closureBtn.setTitle("展开", for: .normal)
+            }else{
+                closureBtn.setTitle("闭合", for: .normal)
+            }
+
             //坐标赋值
             headImageV.frame = king?.headImageViewRect ?? CGRect.zero
+            //头像切圆角要在这里确定了大小之后设置，否则用此方法切圆角无效
             headImageV.setMutiBorderRoundingCorners(headImageV, corner: 10, rect: headImageV.bounds)
 
-//            userNameLabel.frame = king?.usernameLabelRect ?? CGRect.zero
             titleLabel.frame = king?.titleLabelRect ?? CGRect.zero
-//            timeLabel.frame = king?.timeLabelRect ?? CGRect.zero
             contentLabel.frame = king?.contentLabelRect ?? CGRect.zero
 
             //计算 CollectionView  item 的大小 和间距
@@ -123,7 +129,7 @@ class Banner_Cell: UITableViewCell,Reusable {
         $0.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         $0.textAlignment = .left
         $0.numberOfLines = 0
-        $0.backgroundColor = #colorLiteral(red: 0.8705882353, green: 0.8705882353, blue: 0.8705882353, alpha: 1)
+//        $0.backgroundColor = #colorLiteral(red: 0.8705882353, green: 0.8705882353, blue: 0.8705882353, alpha: 1)
     }
     //头像
     lazy var headImageV = UIImageView().then{
@@ -141,7 +147,6 @@ class Banner_Cell: UITableViewCell,Reusable {
         $0.layer.cornerRadius = 5
         //折叠按钮的点击方法
         $0.addTarget(self, action: #selector(buttonClick(event:)), for: .touchUpInside)
-
     })
     
     @objc func buttonClick(event:UIButton) {

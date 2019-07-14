@@ -22,9 +22,15 @@ struct KingCell_HeightModel {
     var contentLabelRect: CGRect!
     var collectionVRect: CGRect!
     
+    // 声明闭合的行数   大于行数的文本可以展开闭合
+    var lineCount: Int = 3
+
+    
     var cellHeight: CGFloat?
     
-    
+    // 是否大过闭合的时候的行数
+    var isMoreThanOneLine: Bool?
+
     init(model:KingModel) {
         self.model = model
         configRect()
@@ -83,10 +89,12 @@ struct KingCell_HeightModel {
         let onelineH = "".king_getHeightWithString(string: "", width: contentLabel_W)
         
         if model.isOpen == false {
-            if contentLabel_H >= 3*onelineH {
-                contentLabel_H = 3*onelineH
+            if contentLabel_H >= CGFloat(lineCount) * onelineH {
+                contentLabel_H =  CGFloat(lineCount) * onelineH
+                isMoreThanOneLine = false
             }else{
                 contentLabel_H = contentM.king_getHeightWithString(string: contentM, width: contentLabel_W)
+                isMoreThanOneLine = true
             }
         }else{
             contentLabel_H = contentM.king_getHeightWithString(string: contentM, width: contentLabel_W)

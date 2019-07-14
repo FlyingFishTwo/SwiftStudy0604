@@ -16,7 +16,7 @@ extension UIView {
     func setMutiBorderRoundingCorners(_ view:UIView,corner:CGFloat,rect:CGRect) {
 //        let rect = CGRect(x: 0, y: 0, width: 50, height: 50)
         let maskPath = UIBezierPath.init(roundedRect: rect,
-                                         byRoundingCorners: [UIRectCorner.bottomLeft, UIRectCorner.topRight],
+                                         byRoundingCorners: [UIRectCorner.allCorners],
                                          cornerRadii: CGSize(width: corner, height: corner))
         let maskLayer = CAShapeLayer()
         maskLayer.frame = rect
