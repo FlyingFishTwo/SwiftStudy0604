@@ -100,7 +100,6 @@ struct KingCell_HeightModel {
             contentLabel_H = contentM.king_getHeightWithString(string: contentM, width: contentLabel_W)
         }
         
-        
         contentLabelRect = CGRect(x: contentLabel_X, y: contentLabel_Y, width: contentLabel_W, height: contentLabel_H)
         
         
@@ -108,6 +107,7 @@ struct KingCell_HeightModel {
         // collection的坐标
         let collection_X: CGFloat = usernameLabelRect.minX
         let collection_Y: CGFloat = contentLabelRect.maxY + 10
+        
         let collection_W: CGFloat = Configs.Dimensions.screenWidth - headImageViewRect.minX - usernameLabelRect.minX*2 //  需求中可以计算图片实际大小
         let collection_H: CGFloat = collection_W
         
@@ -142,17 +142,23 @@ struct KingCell_HeightModel {
                                      y: collection_Y,
                                      width: collection_W,
                                      height: collection_H)
-        }
-        else{
+        }else{
             collectionVRect = CGRect.zero
         }
         
+        // 如果  model.images的数量为0
         if collectionVRect == CGRect.zero {
-            cellHeight = contentLabelRect.maxY + margin
-        }
-        else{
+            cellHeight = contentLabelRect.maxY + 10
+            
+            //如果文本为空 则从 headImageViewRect 的 maxY 算起总行高
+            if contentM.isEmpty == true {
+                cellHeight = headImageViewRect.maxY + margin
+            }
+        }else{
             cellHeight = collectionVRect.maxY + margin
         }
+        
+        
         
     }
     

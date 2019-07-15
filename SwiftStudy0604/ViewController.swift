@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         array.append("我的关注")
         array.append("动态九宫格")
         array.append("tableView缓存高度")
-        array.append("轮播图_朋友圈缓存高度")
+        array.append("轮播图_仿朋友圈")
         return array
     }()
 

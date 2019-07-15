@@ -226,7 +226,7 @@
 			path = "缓存高度";
 			sourceTree = "<group>";
 		};
-		098C476C22D70FDC004C7161 /* 轮播图使用 */ = {
+		098C476C22D70FDC004C7161 /* 轮播图缓存使用 */ = {
 			isa = PBXGroup;
 			children = (
 				09DD099222D8DC88004D8C56 /* new_ImageData.json */,
@@ -238,7 +238,7 @@
 				09DD099022D86217004D8C56 /* KingCell_HeightModel.swift */,
 				098C476F22D72A98004C7161 /* Banner_HeaderView.swift */,
 			);
-			path = "轮播图使用";
+			path = "轮播图缓存使用";
 			sourceTree = "<group>";
 		};
 		0998714022D5B2BF00E94C64 /* 全部 */ = {
@@ -318,7 +318,7 @@
 		09D62F7A22A5CA090061E661 /* SwiftStudy0604 */ = {
 			isa = PBXGroup;
 			children = (
-				098C476C22D70FDC004C7161 /* 轮播图使用 */,
+				098C476C22D70FDC004C7161 /* 轮播图缓存使用 */,
 				0911D76F22D43FA6005ACD19 /* 多控制器加刷新 */,
 				0978BC9822D0E49600637456 /* 缓存高度 */,
 				0978BC7B22D07D1000637456 /* 动态九宫格 */,
