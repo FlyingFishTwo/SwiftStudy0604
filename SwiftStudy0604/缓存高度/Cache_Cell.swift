@@ -49,7 +49,7 @@ class Cache_Cell: UITableViewCell,Reusable {
     
     lazy var headIcon:UIImageView = {
         let head = UIImageView()
-        head.backgroundColor = UIColor.green
+        head.backgroundColor = UIColor.lightGray
         head.layer.cornerRadius = 10
         head.clipsToBounds = true
         return head
