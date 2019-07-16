@@ -31,7 +31,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-Ks-g0M">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beautyGirl" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-Ks-g0M">
                         <rect key="frame" x="15" y="15" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="4BB-WR-taS"/>
@@ -168,6 +168,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="head" width="194" height="194"/>
+        <image name="beautyGirl" width="512" height="746.5"/>
     </resources>
 </document>

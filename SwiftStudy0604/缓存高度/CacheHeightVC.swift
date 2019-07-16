@@ -12,15 +12,36 @@ import HandyJSON
 import SwiftyJSON
 
 class CacheHeightVC: UIViewController {
+    
+    //顶部的图片和View
+    lazy var headerImageViewTop:UIImageView = {
+        let header = UIImageView(frame: CGRect(x:0,y:0,width:Configs.Dimensions.screenWidth,height:160))
+        header.backgroundColor = UIColor.red
+        header.image = UIImage(named: "beautyGirl")
+        header.contentMode = UIView.ContentMode.scaleAspectFill
+        header.clipsToBounds = true
+        return header
+    }()
+    // 懒加载headerView
+    lazy var headerBackView:UIView = {
+        let headerView = UIView.init(frame: CGRect(x:0,y:0,width:Configs.Dimensions.screenWidth,height:160))
+        headerView.backgroundColor = UIColor.lightGray
+        return headerView
+    }()
 
+
+    
     lazy var tableView:UITableView = {
-        let table = UITableView(frame: view.frame, style: .plain)
+        let table = UITableView(frame: CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: Configs.Dimensions.screenHeight), style: .plain)
         table.delegate = self
         table.dataSource = self
         table.register(cellType: Cache_Cell.self)
         table.tableFooterView = UIView()
 //        table.estimatedRowHeight = 100
 //        table.rowHeight = UITableView.automaticDimension
+        
+        table.tableHeaderView = self.headerBackView
+        self.headerBackView.addSubview(self.headerImageViewTop)
         return table
     }()
     
@@ -28,8 +49,9 @@ class CacheHeightVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        // tableView 从导航栏以下开始
+        self.edgesForExtendedLayout = UIRectEdge(rawValue: UIRectEdge.left.rawValue | UIRectEdge.bottom.rawValue | UIRectEdge.right.rawValue);
+
         view.addSubview(tableView)
         
         getData()
@@ -86,3 +108,24 @@ extension CacheHeightVC {
     
     
 }
+
+extension CacheHeightVC {
+    //MARK:- 滚动tableView后   在代理中设置滚动时的坐标变化
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let imageWeight:CGFloat = headerImageViewTop.frame.size.width
+        //上下偏移量
+        let imageOffsetY:CGFloat = scrollView.contentOffset.y
+        //上移
+        if imageOffsetY < 0 {
+            let totalOffset:CGFloat = 160 + abs(imageOffsetY)
+            if abs(imageOffsetY)>160 {
+                return
+            }
+            self.headerImageViewTop.frame = CGRect(x:0,y:imageOffsetY,width: imageWeight,height:totalOffset)
+        }
+    }
+}
+
+
+
+

@@ -14,7 +14,7 @@ class DynamicNinePalaceLatticeVC: UIViewController {
     
     //模拟数据
     lazy var dataArr = {() -> [[String]] in
-        let imageurl = "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1524808538&di=76f435ac59c559e9076c682dace288ee&src=http://imgsrc.baidu.com/imgad/pic/item/8601a18b87d6277fde06cb1b22381f30e924fcf9.jpg"
+        let imageurl = "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1562945457&di=65f8f08a3ab6cad71c7ecd49c0ade49c&src=http://pic27.nipic.com/20130126/10068494_204540170180_2.jpg"
         var darr = [[String]]()
         darr.append([])
         for i in 1...9 {

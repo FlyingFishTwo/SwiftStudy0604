@@ -11,6 +11,7 @@ import Reusable
 import Then
 import Kingfisher
 import SnapKit
+import SVProgressHUD
 
 
 protocol  CloseClickBtnDelegate :NSObjectProtocol{
@@ -19,7 +20,7 @@ protocol  CloseClickBtnDelegate :NSObjectProtocol{
     
 }
 
-class Banner_Cell: UITableViewCell,Reusable {
+class Banner_Cell: UITableViewCell,Reusable,HJImageBrowserDelegate {
     
     ///声明代理
     weak var delegate : CloseClickBtnDelegate?
@@ -56,6 +57,8 @@ class Banner_Cell: UITableViewCell,Reusable {
 
             //计算 CollectionView  item 的大小 和间距
             collectionView.frame = king?.collectionVRect ?? CGRect.zero
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
             if king?.model?.images?.count == 0 {
                 flowLayout.itemSize = CGSize(width: 0, height: 0)
             }else if king?.model?.images?.count == 1{
@@ -99,6 +102,7 @@ class Banner_Cell: UITableViewCell,Reusable {
     
     
     lazy var flowLayout = UICollectionViewFlowLayout()
+    
     
     //标题
     lazy var titleLabel = UILabel().then {
@@ -194,16 +198,46 @@ class Banner_Cell: UITableViewCell,Reusable {
 
 }
 
+// 点击放大 遵循HJImageBrowserDelegate
 extension Banner_Cell :UICollectionViewDataSource,UICollectionViewDelegate{
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return king?.model?.images?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item:King_FriendsCircleItem = collectionView.dequeueReusableCell(for: indexPath, cellType: King_FriendsCircleItem.self)
-        item.imageV.kf.setImage(with: URL(string: (king?.model?.images![indexPath.item])!))
+        
+        item.imageV.kf.setImage(with: URL(string: (king?.model?.images![indexPath.item])!), placeholder: nil, options: nil, progressBlock: { (receivedSize, totalSize) in
+            let progress = Float(receivedSize) / Float(totalSize)
+            SVProgressHUD.showProgress(progress)
+            SVProgressHUD.setBackgroundColor(.clear)
+            SVProgressHUD.setForegroundColor(UIColor.white)
+        }) { (image, error, cacheType, url) in
+            SVProgressHUD.dismiss()
+        }
+
         return item
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let bview = HJImageBrowser()
+        bview.delegate = self
+        bview.bottomView = collectionView
+        bview.indexImage = indexPath.item
+        bview.defaultImage = getColorImageWithColor()
+        bview.arrayImage = king?.model?.images
+        bview.show()
+    }
+    
+    //HJImageBrowser 的代理方法
+    func getTheThumbnailImage(_ indexRow: Int) -> UIImage {
+        // 这个代理返回的是 占位图片 ！！！！！！！！
+        return getColorImageWithColor() 
+    }
+
+    
     
 }
 

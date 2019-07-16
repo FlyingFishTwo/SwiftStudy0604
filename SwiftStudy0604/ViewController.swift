@@ -31,11 +31,13 @@ class ViewController: UIViewController {
     
     lazy var stringArr = {() -> [String] in
         var array = [String]()
-        array.append("分页福利")
-        array.append("我的关注")
+        array.append("分页控制，刷新加载更多")
+        array.append("二级嵌套")
         array.append("动态九宫格")
         array.append("tableView缓存高度")
         array.append("轮播图_仿朋友圈")
+        array.append("headimage放大")
+        array.append("Realm使用")
         return array
     }()
 
@@ -95,6 +97,18 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource {
             banner_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             banner_VC.title = stringArr[indexPath.row]
             self.navigationController?.pushViewController(banner_VC, animated: true)
+            
+        }else if indexPath.row == 5 {
+            let pic_VC = PictureEnlargementVC()
+            pic_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            pic_VC.title = stringArr[indexPath.row]
+            self.navigationController?.pushViewController(pic_VC, animated: true)
+
+        }else if indexPath.row == 6 {
+            let Realm_VC = RealmViewController()
+            Realm_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            Realm_VC.title = stringArr[indexPath.row]
+            self.navigationController?.pushViewController(Realm_VC, animated: true)
             
         }
     }

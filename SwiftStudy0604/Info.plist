@@ -46,5 +46,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string> 添加图片到相册（写权限）</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请允许APP访问您的相册</string>
 </dict>
 </plist>

@@ -20,8 +20,11 @@ pod 'Kingfisher'
 pod 'MBProgressHUD'
 pod 'Reusable'
 pod 'MJRefresh'
+pod 'SVProgressHUD'
 
 pod 'FSPagerView'
+pod 'RealmSwift'
+
 
 
 pod 'Then'
