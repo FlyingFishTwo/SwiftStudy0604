@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import SwiftyJSON
 
-class BannerViewController: UIViewController {
+class BannerViewController: Base_ViewController {
     
 
     //朋友圈数据源

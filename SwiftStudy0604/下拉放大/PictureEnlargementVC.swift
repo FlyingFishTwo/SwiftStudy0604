@@ -11,11 +11,11 @@ import UIKit
 let M_width = Configs.Dimensions.screenWidth
 let CELLID = "CELLID"
 
-class PictureEnlargementVC: UIViewController {
+class PictureEnlargementVC: Base_ViewController {
 
     
     lazy var tableView:UITableView = {
-        let table = UITableView(frame: CGRect(x: 0, y: 64, width: self.view.frame.size.width, height: self.view.frame.size.height-88), style: .plain)
+        let table = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height-88), style: .plain)
         table.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
         table.delegate = self
         table.dataSource = self

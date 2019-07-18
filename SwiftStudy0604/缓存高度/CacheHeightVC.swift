@@ -11,7 +11,7 @@ import Foundation
 import HandyJSON
 import SwiftyJSON
 
-class CacheHeightVC: UIViewController {
+class CacheHeightVC: Base_ViewController {
     
     //顶部的图片和View
     lazy var headerImageViewTop:UIImageView = {
@@ -49,8 +49,6 @@ class CacheHeightVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // tableView 从导航栏以下开始
-        self.edgesForExtendedLayout = UIRectEdge(rawValue: UIRectEdge.left.rawValue | UIRectEdge.bottom.rawValue | UIRectEdge.right.rawValue);
 
         view.addSubview(tableView)
         

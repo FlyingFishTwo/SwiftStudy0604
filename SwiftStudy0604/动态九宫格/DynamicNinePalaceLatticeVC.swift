@@ -10,7 +10,7 @@ import UIKit
 //import Reusable
 
 
-class DynamicNinePalaceLatticeVC: UIViewController {
+class DynamicNinePalaceLatticeVC: Base_ViewController {
     
     //模拟数据
     lazy var dataArr = {() -> [[String]] in

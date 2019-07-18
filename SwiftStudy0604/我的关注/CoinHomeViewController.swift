@@ -15,7 +15,7 @@ import RxCocoa
 
 let CoinHomeViewTableViewCell_Id = "CoinHomeViewTableViewCell_Id"
 
-class CoinHomeViewController: UIViewController {
+class CoinHomeViewController: Base_ViewController {
     
     var concerns = [MyConcern]()
     

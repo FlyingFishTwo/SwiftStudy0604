@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class RealmViewController: UIViewController {
+class RealmViewController: Base_ViewController {
 
     
     //保存从数据库中查询出来的结果集
@@ -34,7 +34,6 @@ class RealmViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "数据库Realm操作"
         view.addSubview(tableView)
-        edgesForExtendedLayout = UIRectEdge(rawValue: UIRectEdge.left.rawValue | UIRectEdge.bottom.rawValue | UIRectEdge.right.rawValue);
         navigationItem.rightBarButtonItem = rightItem
         
         CWLog(Realm.Configuration.defaultConfiguration.fileURL)
