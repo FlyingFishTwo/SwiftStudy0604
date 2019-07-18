@@ -107,7 +107,7 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource {
         }else if indexPath.row == 6 {
             let Realm_VC = RealmViewController()
             Realm_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            Realm_VC.title = stringArr[indexPath.row]
+//            Realm_VC.title = stringArr[indexPath.row]
             self.navigationController?.pushViewController(Realm_VC, animated: true)
             
         }
