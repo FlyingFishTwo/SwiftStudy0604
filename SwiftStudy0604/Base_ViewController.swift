@@ -14,14 +14,21 @@ class Base_ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        // tableView 从导航栏以下开始
-        self.edgesForExtendedLayout = UIRectEdge(rawValue: UIRectEdge.left.rawValue | UIRectEdge.bottom.rawValue | UIRectEdge.right.rawValue);
-        
+    
 
+        navigationController?.navigationBar.isTranslucent = false
 
+        
     }
     
 
     
+}
+
+extension Base_ViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        guard let select = selectedViewController else { return .lightContent }
+//        return select.preferredStatusBarStyle
+        return .`default`
+    }
 }

@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+/***
+ // 添加header   这里的高度要根据图片的高度进行设定    否则cell可能会被图片遮挡（图片过大）
+ tableView.wg_setHeaderView(frame: headFrame, image: UIImage(named: "headerImage"))
+
+ **/
+
 
 var wg_orininalFrame = "wg_orininalFrame"
 var wg_imageView = "wg_imageView"

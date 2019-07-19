@@ -34,7 +34,7 @@ class Welfare_ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        listContainerView.frame = CGRect(x: 0, y: Configs.Dimensions.topHeight+segmentedView.frame.height, width: view.bounds.size.width, height: view.bounds.size.height - 50)
+        listContainerView.frame = CGRect(x: 0, y: segmentedView.frame.height, width: view.bounds.size.width, height: view.bounds.size.height - 50)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -97,7 +97,7 @@ extension Welfare_ViewController {
         // segmentedView 设置
         segmentedView.delegate = self
         segmentedView.backgroundColor = UIColor.lightGray
-        segmentedView.frame = CGRect(x: 0, y: Configs.Dimensions.topHeight, width: Configs.Dimensions.screenWidth, height: 40)
+        segmentedView.frame = CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: 40)
         view.addSubview(segmentedView)
         //配置指示器
         let indicator = JXSegmentedIndicatorLineView()

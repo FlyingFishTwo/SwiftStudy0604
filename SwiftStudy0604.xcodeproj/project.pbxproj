@@ -12,10 +12,12 @@
 		0911D77122D43FD7005ACD19 /* Profile_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911D77022D43FD7005ACD19 /* Profile_ViewController.swift */; };
 		091BBE1D22DE0EF80026964C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE1C22DE0EF80026964C /* Todo.swift */; };
 		091C5B7A22E04DBD0004F43A /* Base_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091C5B7922E04DBD0004F43A /* Base_ViewController.swift */; };
+		091C5B8222E06EA90004F43A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091C5B8122E06EA90004F43A /* R.generated.swift */; };
 		0932A6AB22C85EED001CE760 /* CoinHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932A6AA22C85EED001CE760 /* CoinHomeViewController.swift */; };
 		0932A6B222C87C92001CE760 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932A6B122C87C92001CE760 /* String+Extension.swift */; };
 		093C759B22CF3BFC00C7BE9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */; };
 		093C759D22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759C22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift */; };
+		096EA18622E188EC00C1CDDD /* CustomNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */; };
 		09732F0F22DC6F7100FB1E54 /* HJImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09732F0E22DC6F7100FB1E54 /* HJImageBrowser.swift */; };
 		0978BC7D22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978BC7C22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift */; };
 		0978BC9322D0CEB300637456 /* KL_ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978BC8E22D0CEB300637456 /* KL_ImageCell.swift */; };
@@ -87,10 +89,12 @@
 		0911D77022D43FD7005ACD19 /* Profile_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_ViewController.swift; sourceTree = "<group>"; };
 		091BBE1C22DE0EF80026964C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		091C5B7922E04DBD0004F43A /* Base_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base_ViewController.swift; sourceTree = "<group>"; };
+		091C5B8122E06EA90004F43A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0932A6AA22C85EED001CE760 /* CoinHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHomeViewController.swift; sourceTree = "<group>"; };
 		0932A6B122C87C92001CE760 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		093C759C22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoadingPlugin.swift; sourceTree = "<group>"; };
+		096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNaviBar.swift; sourceTree = "<group>"; };
 		09732F0E22DC6F7100FB1E54 /* HJImageBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJImageBrowser.swift; sourceTree = "<group>"; };
 		0978BC7C22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicNinePalaceLatticeVC.swift; sourceTree = "<group>"; };
 		0978BC8E22D0CEB300637456 /* KL_ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KL_ImageCell.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		090061D622DD7039000BED93 /* 下拉放大 */ = {
 			isa = PBXGroup;
 			children = (
+				096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */,
 				090061D722DD70B6000BED93 /* PictureEnlargementVC.swift */,
 			);
 			path = "下拉放大";
@@ -313,6 +318,7 @@
 		09D5ADD322CA137A00D62790 /* Configure */ = {
 			isa = PBXGroup;
 			children = (
+				091C5B8122E06EA90004F43A /* R.generated.swift */,
 				09CDFDFA22C4529400D9718D /* CWLog.swift */,
 				09FC2FA922C37BD800E95078 /* Configs.swift */,
 			);
@@ -420,6 +426,7 @@
 				09D62F7522A5CA090061E661 /* Frameworks */,
 				09D62F7622A5CA090061E661 /* Resources */,
 				5DB53B8272C23BD9DC1D7243 /* [CP] Embed Pods Frameworks */,
+				091C5B7E22E06B2C0004F43A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -545,6 +552,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		091C5B7E22E06B2C0004F43A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		1424B0DC5E83E27E53C8E583 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,6 +673,7 @@
 				09D5ADCF22C9FA3100D62790 /* CoinView_Cell.swift in Sources */,
 				09F6A35C22B9D60100FC6948 /* SecondViewController.swift in Sources */,
 				0998714522D5B46800E94C64 /* All_Cell.swift in Sources */,
+				096EA18622E188EC00C1CDDD /* CustomNaviBar.swift in Sources */,
 				099E2F6E22DDD90300C000D5 /* RealmViewController.swift in Sources */,
 				0978BC7D22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift in Sources */,
 				098C477022D72A98004C7161 /* Banner_HeaderView.swift in Sources */,
@@ -673,6 +700,7 @@
 				097FF9A722D3B942005AA30D /* UIView+Extension.swift in Sources */,
 				09FC2F9B22C3111800E95078 /* Internet.swift in Sources */,
 				09FC2FA222C3334F00E95078 /* NetWorkTools.swift in Sources */,
+				091C5B8222E06EA90004F43A /* R.generated.swift in Sources */,
 				090061D822DD70B6000BED93 /* PictureEnlargementVC.swift in Sources */,
 				09FC2FAA22C37BD800E95078 /* Configs.swift in Sources */,
 				09C18C8E22D34F420086A212 /* Cache_Cell.swift in Sources */,

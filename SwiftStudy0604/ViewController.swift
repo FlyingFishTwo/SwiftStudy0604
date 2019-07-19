@@ -13,7 +13,7 @@ import RxSwift
 
 
 let cellId = "cellID"
-class ViewController: UIViewController {
+class ViewController: Base_ViewController {
     let disposeBag = DisposeBag()
 
     var nameString : String?
@@ -41,10 +41,16 @@ class ViewController: UIViewController {
         return array
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        edgesForExtendedLayout = UIRectEdge(rawValue: UIRectEdge.left.rawValue | UIRectEdge.bottom.rawValue | UIRectEdge.right.rawValue)
+        view.backgroundColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
+        
         view.addSubview(tableView)
         
         

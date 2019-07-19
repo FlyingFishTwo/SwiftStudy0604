@@ -50,5 +50,11 @@
 	<string> 添加图片到相册（写权限）</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>请允许APP访问您的相册</string>
+	<key>NSCameraUsageDescription</key>
+	<string>请允许系统访问相机</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>允许访问麦克风</string>
+	<key>NSContactsUsageDescription</key>
+	<string>访问联系人</string>
 </dict>
 </plist>

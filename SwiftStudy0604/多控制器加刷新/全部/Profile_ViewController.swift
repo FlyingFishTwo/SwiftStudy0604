@@ -9,7 +9,7 @@
 import UIKit
 import JXSegmentedView
 
-class Profile_ViewController: UIViewController {
+class Profile_ViewController: Base_ViewController {
     
     var dataArray = [WelfareModel]()
     var page = 1

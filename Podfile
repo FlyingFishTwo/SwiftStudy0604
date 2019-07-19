@@ -25,6 +25,7 @@ pod 'SVProgressHUD'
 pod 'FSPagerView'
 pod 'RealmSwift'
 
+pod 'R.swift'
 
 
 pod 'Then'

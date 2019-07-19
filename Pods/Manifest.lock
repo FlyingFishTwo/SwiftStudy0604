@@ -16,6 +16,9 @@ PODS:
   - "NSObject+Rx (5.0.0)":
     - RxSwift (~> 5.0)
   - ObjectMapper (3.5.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
   - Realm (3.17.1):
     - Realm/Headers (= 3.17.1)
   - Realm/Headers (3.17.1)
@@ -57,6 +60,7 @@ DEPENDENCIES:
   - Moya
   - "NSObject+Rx"
   - ObjectMapper
+  - R.swift
   - RealmSwift
   - Result
   - Reusable
@@ -83,6 +87,8 @@ SPEC REPOS:
     - Moya
     - "NSObject+Rx"
     - ObjectMapper
+    - R.swift
+    - R.swift.Library
     - Realm
     - RealmSwift
     - Result
@@ -110,6 +116,8 @@ SPEC CHECKSUMS:
   Moya: 161263550064ff8a4948e8ff63137fd72a876292
   "NSObject+Rx": 6151a97d171f7187c4183746acc42d9451952a7b
   ObjectMapper: 078b564ed25c6578b62588e306bf1da3924636d4
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
   RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
@@ -124,6 +132,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bd0742fe8f2b32c235c24c1ef5826b9d1bf080a1
+PODFILE CHECKSUM: beb326ca4fae1895e4524a909d8ae7ca4416d53d
 
 COCOAPODS: 1.7.4
