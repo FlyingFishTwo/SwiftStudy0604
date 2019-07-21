@@ -145,7 +145,7 @@ extension PictureEnlargementVC {
 }
 
 
-// MARK: UITableViewDataSource
+// MARK: UITableViewDataSource  ，  UITableViewDelegate
 extension PictureEnlargementVC: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

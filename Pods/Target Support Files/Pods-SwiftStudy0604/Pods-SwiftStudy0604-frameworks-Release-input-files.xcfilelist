@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-SwiftStudy0604/Pods-SwiftStudy0604-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/ETNavBarTransparent/ETNavBarTransparent.framework
 ${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
 ${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework

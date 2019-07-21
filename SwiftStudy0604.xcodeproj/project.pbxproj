@@ -17,6 +17,7 @@
 		0932A6B222C87C92001CE760 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932A6B122C87C92001CE760 /* String+Extension.swift */; };
 		093C759B22CF3BFC00C7BE9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */; };
 		093C759D22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759C22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift */; };
+		093F245522E2AD5C001F7B5E /* BigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F245422E2AD5C001F7B5E /* BigImageViewController.swift */; };
 		096EA18622E188EC00C1CDDD /* CustomNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */; };
 		09732F0F22DC6F7100FB1E54 /* HJImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09732F0E22DC6F7100FB1E54 /* HJImageBrowser.swift */; };
 		0978BC7D22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978BC7C22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift */; };
@@ -94,6 +95,7 @@
 		0932A6B122C87C92001CE760 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		093C759C22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoadingPlugin.swift; sourceTree = "<group>"; };
+		093F245422E2AD5C001F7B5E /* BigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageViewController.swift; sourceTree = "<group>"; };
 		096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNaviBar.swift; sourceTree = "<group>"; };
 		09732F0E22DC6F7100FB1E54 /* HJImageBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJImageBrowser.swift; sourceTree = "<group>"; };
 		0978BC7C22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicNinePalaceLatticeVC.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		099E2F6C22DDCEBB00C000D5 /* Realm使用 */ = {
 			isa = PBXGroup;
 			children = (
+				093F245422E2AD5C001F7B5E /* BigImageViewController.swift */,
 				099E2F6D22DDD90300C000D5 /* RealmViewController.swift */,
 				091BBE1C22DE0EF80026964C /* Todo.swift */,
 			);
@@ -668,6 +671,7 @@
 				09CDFE0522C4C15A00D9718D /* UIImage+Extension.swift in Sources */,
 				098C476E22D70FEF004C7161 /* BannerViewController.swift in Sources */,
 				09DD098D22D83A0B004D8C56 /* KingModel.swift in Sources */,
+				093F245522E2AD5C001F7B5E /* BigImageViewController.swift in Sources */,
 				0978BC9A22D0E4A400637456 /* CacheHeightVC.swift in Sources */,
 				09DD098922D8191D004D8C56 /* Banner_Cell.swift in Sources */,
 				09D5ADCF22C9FA3100D62790 /* CoinView_Cell.swift in Sources */,

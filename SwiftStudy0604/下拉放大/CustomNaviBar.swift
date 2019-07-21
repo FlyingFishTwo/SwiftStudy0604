@@ -25,12 +25,7 @@ typealias ButtonClickNavClosure = (NavButtonItemType)->()
 
 class CustomNaviBar: UIView {
     
-//    var title : String!
-//    var leftImage : String!
-//    var rightImage : String!
-//    var titleColor : UIColor!
     var navButtonClosure : ButtonClickNavClosure?
-    
     
     var leftBtn : UIButton!
     var rightBtn : UIButton!

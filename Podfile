@@ -31,6 +31,7 @@ pod 'R.swift'
 pod 'Then'
 pod 'IBAnimatable'  # AnimatableButton
 
+pod 'ETNavBarTransparent'#导航栏平滑过度
 
 
 pod 'YYKit'

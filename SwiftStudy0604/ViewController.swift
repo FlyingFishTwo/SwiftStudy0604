@@ -38,6 +38,7 @@ class ViewController: Base_ViewController {
         array.append("轮播图_仿朋友圈")
         array.append("headimage放大")
         array.append("Realm使用")
+        array.append("下拉缩放")
         return array
     }()
 
@@ -110,6 +111,12 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource {
             Realm_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 //            Realm_VC.title = stringArr[indexPath.row]
             self.navigationController?.pushViewController(Realm_VC, animated: true)
+            
+        }else if indexPath.row == 7 {
+            let bigVC = BigImageViewController()
+            bigVC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            //            Realm_VC.title = stringArr[indexPath.row]
+            self.navigationController?.pushViewController(bigVC, animated: true)
             
         }
     }
