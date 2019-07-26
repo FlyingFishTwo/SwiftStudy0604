@@ -12,7 +12,6 @@ import ETNavBarTransparent
 
 
 
-let NavigationBarHight = 64.0
 let ImageHight = 200.0
 
 let cell_ID = "cell_ID"
@@ -20,23 +19,42 @@ let cell_ID = "cell_ID"
 
 class BigImageViewController: Base_ViewController {
 
+    //UI
     var tableView: UITableView!
     var zoomImageView: UIImageView?
     var circleView: UIImageView!
     var nameLabel: UILabel!
     var changeHeaderBtn: UIButton!
+    
+//    var titleArr = [String]()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "平滑过渡"
-
-        self.navBarBgAlpha = 0
-        self.navBarTintColor = .red
+//        self.navBarBgAlpha = 0
+//        self.navBarTintColor = .red
+        navigationController?.setNavigationBarHidden(true, animated: true)
 
         addTableView()
         
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+
+        
     }
     
+    //重写 父类控制器的返回按钮a点击方法
+    override func navigationBack() {
+         print("执行返回wdddfs")
+        navigationController?.popViewController(animated: true)
+    }
+    
+
     
 }
 
@@ -67,12 +85,12 @@ extension BigImageViewController  {
             frame.origin.y = y
             frame.size.height = -y
             zoomImageView?.frame = frame
-            navBarBgAlpha = 1
-            navBarTintColor = UIColor.defaultNavBarTintColor
+//            navBarBgAlpha = 1
+//            navBarTintColor = UIColor.defaultNavBarTintColor
 
         }else{
-            navBarBgAlpha = 0
-            navBarTintColor = .red
+//            navBarBgAlpha = 0
+//            navBarTintColor = .red
 
         }
 
@@ -85,14 +103,13 @@ extension BigImageViewController  {
     
     func addTableView() {
         //1.初始化_tableView  不要使用懒加载   否则跳转来到本界面的时候可能顶部图片会向上偏移
-        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: Configs.Dimensions.screenHeight), style: .plain)
         //2.设置代理
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_ID)
-        //3.设置contentInset属性（上左下右 的值）
-        tableView.contentInset = UIEdgeInsets(top: 288, left: 0, bottom: 0, right: 0)
-        
+        //3.设置contentInset属性（上左下右 的值）   ⚠️tableView 的偏移量的值要和背景图的坐标值对应上
+        tableView.contentInset = UIEdgeInsets(top: CGFloat(ImageHight), left: 0, bottom: 0, right: 0)
         zoomImageView = UIImageView(image: UIImage(named: "headerImage"))
         zoomImageView?.frame = CGRect(x: 0, y: CGFloat(-ImageHight), width: view.frame.size.width, height: CGFloat(ImageHight))
         //核心就是这句代码!
@@ -112,7 +129,7 @@ extension BigImageViewController  {
         circleView.autoresizingMask = .flexibleTopMargin //自动布局，自适应顶部
         
         //昵称
-        nameLabel = UILabel(frame: CGRect(x: Int(16), y: Int(circleView.frame.maxY), width: 280, height: 20))
+        nameLabel = UILabel(frame: CGRect(x: Int(16), y: Int(circleView.frame.maxY), width: Int(CGFloat(ImageHight)+Configs.Dimensions.topHeight), height: 20))
         nameLabel.textColor = UIColor.white
         nameLabel.text = "@king"
         nameLabel.autoresizingMask = .flexibleTopMargin //自动布局，自适应顶部

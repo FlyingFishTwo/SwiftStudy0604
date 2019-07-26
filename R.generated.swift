@@ -46,7 +46,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 41 images.
   struct image {
     /// Image `beautyGirl`.
     static let beautyGirl = Rswift.ImageResource(bundle: R.hostingBundle, name: "beautyGirl")
@@ -54,10 +54,82 @@ struct R: Rswift.Validatable {
     static let button返回B = Rswift.ImageResource(bundle: R.hostingBundle, name: "button-返回B")
     /// Image `button-返回`.
     static let button返回 = Rswift.ImageResource(bundle: R.hostingBundle, name: "button-返回")
+    /// Image `feed_publish_44x44_`.
+    static let feed_publish_44x44_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "feed_publish_44x44_")
+    /// Image `feed_publish_close_44x44_`.
+    static let feed_publish_close_44x44_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "feed_publish_close_44x44_")
+    /// Image `feed_publish_close_night_44x44_`.
+    static let feed_publish_close_night_44x44_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "feed_publish_close_night_44x44_")
+    /// Image `feed_publish_night_44x44_`.
+    static let feed_publish_night_44x44_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "feed_publish_night_44x44_")
+    /// Image `feed_publish_press_44x44_`.
+    static let feed_publish_press_44x44_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "feed_publish_press_44x44_")
+    /// Image `feed_publish_press_night_44x44_`.
+    static let feed_publish_press_night_44x44_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "feed_publish_press_night_44x44_")
     /// Image `headerImage`.
     static let headerImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "headerImage")
+    /// Image `home_tabbar_32x32_`.
+    static let home_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_tabbar_32x32_")
+    /// Image `home_tabbar_night_32x32_`.
+    static let home_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_tabbar_night_32x32_")
+    /// Image `home_tabbar_press_32x32_`.
+    static let home_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_tabbar_press_32x32_")
+    /// Image `home_tabbar_press_night_32x32_`.
+    static let home_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_tabbar_press_night_32x32_")
+    /// Image `huoshan_tabbar_32x32_`.
+    static let huoshan_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "huoshan_tabbar_32x32_")
+    /// Image `huoshan_tabbar_night_32x32_`.
+    static let huoshan_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "huoshan_tabbar_night_32x32_")
+    /// Image `huoshan_tabbar_press_32x32_`.
+    static let huoshan_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "huoshan_tabbar_press_32x32_")
+    /// Image `huoshan_tabbar_press_night_32x32_`.
+    static let huoshan_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "huoshan_tabbar_press_night_32x32_")
+    /// Image `ic_screenshot_off_36x36_`.
+    static let ic_screenshot_off_36x36_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_screenshot_off_36x36_")
+    /// Image `lefterbackicon_titlebar_24x24_`.
+    static let lefterbackicon_titlebar_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "lefterbackicon_titlebar_24x24_")
     /// Image `mine-setting-iconN`.
     static let mineSettingIconN = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine-setting-iconN")
+    /// Image `mine_tabbar_32x32_`.
+    static let mine_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_tabbar_32x32_")
+    /// Image `mine_tabbar_night_32x32_`.
+    static let mine_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_tabbar_night_32x32_")
+    /// Image `mine_tabbar_press_32x32_`.
+    static let mine_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_tabbar_press_32x32_")
+    /// Image `mine_tabbar_press_night_32x32_`.
+    static let mine_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_tabbar_press_night_32x32_")
+    /// Image `no_login_tabbar_32x32_`.
+    static let no_login_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "no_login_tabbar_32x32_")
+    /// Image `no_login_tabbar_night_32x32_`.
+    static let no_login_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "no_login_tabbar_night_32x32_")
+    /// Image `no_login_tabbar_press_32x32_`.
+    static let no_login_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "no_login_tabbar_press_32x32_")
+    /// Image `no_login_tabbar_press_night_32x32_`.
+    static let no_login_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "no_login_tabbar_press_night_32x32_")
+    /// Image `redpackage_tabbar_32x32_`.
+    static let redpackage_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "redpackage_tabbar_32x32_")
+    /// Image `redpackage_tabbar_night_32x32_`.
+    static let redpackage_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "redpackage_tabbar_night_32x32_")
+    /// Image `redpackage_tabbar_press_32x32_`.
+    static let redpackage_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "redpackage_tabbar_press_32x32_")
+    /// Image `redpackage_tabbar_press_night_32x32_`.
+    static let redpackage_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "redpackage_tabbar_press_night_32x32_")
+    /// Image `video_tabbar_32x32_`.
+    static let video_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "video_tabbar_32x32_")
+    /// Image `video_tabbar_night_32x32_`.
+    static let video_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "video_tabbar_night_32x32_")
+    /// Image `video_tabbar_press_32x32_`.
+    static let video_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "video_tabbar_press_32x32_")
+    /// Image `video_tabbar_press_night_32x32_`.
+    static let video_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "video_tabbar_press_night_32x32_")
+    /// Image `weitoutiao_tabbar_32x32_`.
+    static let weitoutiao_tabbar_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "weitoutiao_tabbar_32x32_")
+    /// Image `weitoutiao_tabbar_night_32x32_`.
+    static let weitoutiao_tabbar_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "weitoutiao_tabbar_night_32x32_")
+    /// Image `weitoutiao_tabbar_press_32x32_`.
+    static let weitoutiao_tabbar_press_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "weitoutiao_tabbar_press_32x32_")
+    /// Image `weitoutiao_tabbar_press_night_32x32_`.
+    static let weitoutiao_tabbar_press_night_32x32_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "weitoutiao_tabbar_press_night_32x32_")
     
     /// `UIImage(named: "beautyGirl", bundle: ..., traitCollection: ...)`
     static func beautyGirl(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -74,14 +146,194 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.button返回B, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "feed_publish_44x44_", bundle: ..., traitCollection: ...)`
+    static func feed_publish_44x44_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.feed_publish_44x44_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "feed_publish_close_44x44_", bundle: ..., traitCollection: ...)`
+    static func feed_publish_close_44x44_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.feed_publish_close_44x44_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "feed_publish_close_night_44x44_", bundle: ..., traitCollection: ...)`
+    static func feed_publish_close_night_44x44_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.feed_publish_close_night_44x44_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "feed_publish_night_44x44_", bundle: ..., traitCollection: ...)`
+    static func feed_publish_night_44x44_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.feed_publish_night_44x44_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "feed_publish_press_44x44_", bundle: ..., traitCollection: ...)`
+    static func feed_publish_press_44x44_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.feed_publish_press_44x44_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "feed_publish_press_night_44x44_", bundle: ..., traitCollection: ...)`
+    static func feed_publish_press_night_44x44_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.feed_publish_press_night_44x44_, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "headerImage", bundle: ..., traitCollection: ...)`
     static func headerImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.headerImage, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "home_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func home_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "home_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func home_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "home_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func home_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "home_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func home_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_tabbar_press_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "huoshan_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func huoshan_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.huoshan_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "huoshan_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func huoshan_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.huoshan_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "huoshan_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func huoshan_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.huoshan_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "huoshan_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func huoshan_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.huoshan_tabbar_press_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ic_screenshot_off_36x36_", bundle: ..., traitCollection: ...)`
+    static func ic_screenshot_off_36x36_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_screenshot_off_36x36_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "lefterbackicon_titlebar_24x24_", bundle: ..., traitCollection: ...)`
+    static func lefterbackicon_titlebar_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.lefterbackicon_titlebar_24x24_, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "mine-setting-iconN", bundle: ..., traitCollection: ...)`
     static func mineSettingIconN(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.mineSettingIconN, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func mine_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func mine_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func mine_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "mine_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func mine_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_tabbar_press_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "no_login_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func no_login_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.no_login_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "no_login_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func no_login_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.no_login_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "no_login_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func no_login_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.no_login_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "no_login_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func no_login_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.no_login_tabbar_press_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "redpackage_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func redpackage_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.redpackage_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "redpackage_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func redpackage_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.redpackage_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "redpackage_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func redpackage_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.redpackage_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "redpackage_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func redpackage_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.redpackage_tabbar_press_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "video_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func video_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.video_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "video_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func video_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.video_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "video_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func video_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.video_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "video_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func video_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.video_tabbar_press_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "weitoutiao_tabbar_32x32_", bundle: ..., traitCollection: ...)`
+    static func weitoutiao_tabbar_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.weitoutiao_tabbar_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "weitoutiao_tabbar_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func weitoutiao_tabbar_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.weitoutiao_tabbar_night_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "weitoutiao_tabbar_press_32x32_", bundle: ..., traitCollection: ...)`
+    static func weitoutiao_tabbar_press_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.weitoutiao_tabbar_press_32x32_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "weitoutiao_tabbar_press_night_32x32_", bundle: ..., traitCollection: ...)`
+    static func weitoutiao_tabbar_press_night_32x32_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.weitoutiao_tabbar_press_night_32x32_, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}

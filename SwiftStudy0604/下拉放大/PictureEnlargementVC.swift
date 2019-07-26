@@ -40,10 +40,13 @@ class PictureEnlargementVC: Base_ViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+//        navigationController?.navigationBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+//        navigationController?.navigationBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     override func viewDidLoad() {
@@ -57,6 +60,8 @@ class PictureEnlargementVC: Base_ViewController {
         configureWithNavi()
 
     }
+
+
 
 }
 extension PictureEnlargementVC {

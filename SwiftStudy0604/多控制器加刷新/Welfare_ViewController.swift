@@ -9,7 +9,7 @@
 import UIKit
 import JXSegmentedView
 
-class Welfare_ViewController: UIViewController {
+class Welfare_ViewController: Base_ViewController {
     
     var welfArr = [[WelfareModel]]()
     

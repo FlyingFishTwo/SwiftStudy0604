@@ -43,7 +43,7 @@ class BannerViewController: Base_ViewController {
     
     //懒加载 tableView
     lazy var tableView:UITableView = {
-        let table = UITableView(frame: CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: Configs.Dimensions.screenHeight), style: .plain )
+        let table = UITableView(frame: CGRect(x: 0, y: 0, width: Configs.Dimensions.screenWidth, height: Configs.Dimensions.screenHeight-Configs.Dimensions.topHeight), style: .plain )
         table.delegate = self
         table.dataSource = self
         table.register(cellType: Banner_Cell.self)
