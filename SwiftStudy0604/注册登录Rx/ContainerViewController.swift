@@ -64,10 +64,10 @@ class ContainerViewController: Base_ViewController {
 
 
 
-//extension ViewController: UISearchControllerDelegate {
-//    func didPresentSearchController(_ searchController: UISearchController) {
-//        searchController.searchBar.setShowsCancelButton(false, animated: false)
-//    }
-//}
+extension ViewController: UISearchControllerDelegate {
+    func didPresentSearchController(_ searchController: UISearchController) {
+        searchController.searchBar.setShowsCancelButton(false, animated: false)
+    }
+}
 
 

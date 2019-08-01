@@ -10,6 +10,8 @@ import Foundation
 import Moya
 import Alamofire
 import Result
+import RxSwift
+import RxCocoa
 
 
 let base_url = "https://is.snssdk.com"
@@ -139,4 +141,5 @@ extension MyAPI : TargetType {
 }
 
 
+//let King_NetTool = MoyaProvider<MyAPI>()
 

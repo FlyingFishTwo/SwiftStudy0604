@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - Differentiator (4.0.1)
   - ETNavBarTransparent (1.1.2)
   - FSPagerView (0.8.2)
   - HandyJSON (5.0.0)
@@ -37,6 +38,10 @@ PODS:
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
@@ -68,6 +73,7 @@ DEPENDENCIES:
   - Reusable
   - RxActivityIndicator
   - RxCocoa
+  - RxDataSources
   - RxSwift
   - SnapKit
   - SVProgressHUD
@@ -78,6 +84,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Differentiator
     - ETNavBarTransparent
     - FSPagerView
     - HandyJSON
@@ -98,6 +105,7 @@ SPEC REPOS:
     - Reusable
     - RxActivityIndicator
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - SnapKit
@@ -108,6 +116,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   ETNavBarTransparent: 0afd5a96a0bf07899b9140c585611d79ea6dbf96
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
@@ -128,6 +137,7 @@ SPEC CHECKSUMS:
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   RxActivityIndicator: b337e29a8399d4c8dc250defaf5874221d9bd27e
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -136,6 +146,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 20ea0f5bfabfe23f2807f41f69b7c503101133a6
+PODFILE CHECKSUM: 8351d78069f566f54cad61ac0cf8825f3e1b66a5
 
 COCOAPODS: 1.7.4
