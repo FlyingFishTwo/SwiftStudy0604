@@ -18,8 +18,19 @@
 		093C759B22CF3BFC00C7BE9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */; };
 		093C759D22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C759C22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift */; };
 		093F245522E2AD5C001F7B5E /* BigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F245422E2AD5C001F7B5E /* BigImageViewController.swift */; };
+		0948AC4D22EC10380027F392 /* MyRegister_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948AC4B22EC10380027F392 /* MyRegister_ViewController.swift */; };
+		0948AC4E22EC10380027F392 /* MyRegister_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0948AC4C22EC10380027F392 /* MyRegister_ViewController.xib */; };
 		096EA18622E188EC00C1CDDD /* CustomNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */; };
 		09732F0F22DC6F7100FB1E54 /* HJImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09732F0E22DC6F7100FB1E54 /* HJImageBrowser.swift */; };
+		0978759E22F1E3090049BDA2 /* ProtocolRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */; };
+		097875A022F1E8320049BDA2 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */; };
+		097875A222F1ECD30049BDA2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875A122F1ECD30049BDA2 /* Service.swift */; };
+		097875A622F2726D0049BDA2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875A522F2726D0049BDA2 /* LoginViewModel.swift */; };
+		097875AB22F27C250049BDA2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875A922F27C250049BDA2 /* LoginViewController.swift */; };
+		097875AC22F27C250049BDA2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 097875AA22F27C250049BDA2 /* LoginViewController.xib */; };
+		097875B222F284E00049BDA2 /* ContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875B122F284E00049BDA2 /* ContainerViewModel.swift */; };
+		097875B422F287D30049BDA2 /* heros.plist in Resources */ = {isa = PBXBuildFile; fileRef = 097875B322F287D30049BDA2 /* heros.plist */; };
+		097875B622F28C580049BDA2 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875B522F28C580049BDA2 /* ContainerViewController.swift */; };
 		0978BC7D22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978BC7C22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift */; };
 		0978BC9322D0CEB300637456 /* KL_ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978BC8E22D0CEB300637456 /* KL_ImageCell.swift */; };
 		0978BC9422D0CEB300637456 /* KL_DynamicNineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0978BC8F22D0CEB300637456 /* KL_DynamicNineCell.xib */; };
@@ -102,8 +113,19 @@
 		093C759A22CF3BFC00C7BE9A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		093C759C22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoadingPlugin.swift; sourceTree = "<group>"; };
 		093F245422E2AD5C001F7B5E /* BigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageViewController.swift; sourceTree = "<group>"; };
+		0948AC4B22EC10380027F392 /* MyRegister_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRegister_ViewController.swift; sourceTree = "<group>"; };
+		0948AC4C22EC10380027F392 /* MyRegister_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRegister_ViewController.xib; sourceTree = "<group>"; };
 		096EA18522E188EC00C1CDDD /* CustomNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNaviBar.swift; sourceTree = "<group>"; };
 		09732F0E22DC6F7100FB1E54 /* HJImageBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJImageBrowser.swift; sourceTree = "<group>"; };
+		0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolRegister.swift; sourceTree = "<group>"; };
+		0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		097875A122F1ECD30049BDA2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		097875A522F2726D0049BDA2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		097875A922F27C250049BDA2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		097875AA22F27C250049BDA2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		097875B122F284E00049BDA2 /* ContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewModel.swift; sourceTree = "<group>"; };
+		097875B322F287D30049BDA2 /* heros.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heros.plist; sourceTree = "<group>"; };
+		097875B522F28C580049BDA2 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		0978BC7C22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicNinePalaceLatticeVC.swift; sourceTree = "<group>"; };
 		0978BC8E22D0CEB300637456 /* KL_ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KL_ImageCell.swift; sourceTree = "<group>"; };
 		0978BC8F22D0CEB300637456 /* KL_DynamicNineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KL_DynamicNineCell.xib; sourceTree = "<group>"; };
@@ -242,6 +264,24 @@
 			path = Third;
 			sourceTree = "<group>";
 		};
+		0948AC4A22EC10120027F392 /* 注册登录Rx */ = {
+			isa = PBXGroup;
+			children = (
+				0948AC4B22EC10380027F392 /* MyRegister_ViewController.swift */,
+				0948AC4C22EC10380027F392 /* MyRegister_ViewController.xib */,
+				0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */,
+				0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */,
+				097875A922F27C250049BDA2 /* LoginViewController.swift */,
+				097875AA22F27C250049BDA2 /* LoginViewController.xib */,
+				097875B522F28C580049BDA2 /* ContainerViewController.swift */,
+				097875B122F284E00049BDA2 /* ContainerViewModel.swift */,
+				097875A522F2726D0049BDA2 /* LoginViewModel.swift */,
+				097875A122F1ECD30049BDA2 /* Service.swift */,
+				097875B322F287D30049BDA2 /* heros.plist */,
+			);
+			path = "注册登录Rx";
+			sourceTree = "<group>";
+		};
 		09732F0122DC55AF00FB1E54 /* 浏览大图 */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +417,7 @@
 		09D62F7A22A5CA090061E661 /* SwiftStudy0604 */ = {
 			isa = PBXGroup;
 			children = (
+				0948AC4A22EC10120027F392 /* 注册登录Rx */,
 				099E2F6C22DDCEBB00C000D5 /* Realm使用 */,
 				090061D622DD7039000BED93 /* 下拉放大 */,
 				098C476C22D70FDC004C7161 /* 轮播图缓存使用 */,
@@ -561,9 +602,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097875AC22F27C250049BDA2 /* LoginViewController.xib in Resources */,
 				09DD099322D8DC88004D8C56 /* new_ImageData.json in Resources */,
+				097875B422F287D30049BDA2 /* heros.plist in Resources */,
 				09DD098B22D839A4004D8C56 /* king.json in Resources */,
 				09D62F8622A5CA0C0061E661 /* LaunchScreen.storyboard in Resources */,
+				0948AC4E22EC10380027F392 /* MyRegister_ViewController.xib in Resources */,
 				09C18C9022D352130086A212 /* dataCell_Height.json in Resources */,
 				0978BC9722D0CEB300637456 /* KL_ImageCell.xib in Resources */,
 				09D62F8322A5CA0C0061E661 /* Assets.xcassets in Resources */,
@@ -711,13 +755,17 @@
 				09F5FF9F22E8665E0066045B /* Huoshan_ViewController.swift in Sources */,
 				09DD098922D8191D004D8C56 /* Banner_Cell.swift in Sources */,
 				09D5ADCF22C9FA3100D62790 /* CoinView_Cell.swift in Sources */,
+				097875B222F284E00049BDA2 /* ContainerViewModel.swift in Sources */,
 				09F5FFA322E8669A0066045B /* My_NavigationController.swift in Sources */,
+				097875B622F28C580049BDA2 /* ContainerViewController.swift in Sources */,
 				09F6A35C22B9D60100FC6948 /* SecondViewController.swift in Sources */,
 				0998714522D5B46800E94C64 /* All_Cell.swift in Sources */,
 				096EA18622E188EC00C1CDDD /* CustomNaviBar.swift in Sources */,
+				097875A622F2726D0049BDA2 /* LoginViewModel.swift in Sources */,
 				099E2F6E22DDD90300C000D5 /* RealmViewController.swift in Sources */,
 				0978BC7D22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift in Sources */,
 				098C477022D72A98004C7161 /* Banner_HeaderView.swift in Sources */,
+				0978759E22F1E3090049BDA2 /* ProtocolRegister.swift in Sources */,
 				09D62F7E22A5CA090061E661 /* ViewController.swift in Sources */,
 				093C759D22CF3CFE00C7BE9A /* RequestLoadingPlugin.swift in Sources */,
 				09C18C9822D37FBF0086A212 /* NSURLSession+SKSession.m in Sources */,
@@ -738,15 +786,19 @@
 				09DD099122D86217004D8C56 /* KingCell_HeightModel.swift in Sources */,
 				09CDFDFB22C4529400D9718D /* CWLog.swift in Sources */,
 				0932A6AB22C85EED001CE760 /* CoinHomeViewController.swift in Sources */,
+				097875AB22F27C250049BDA2 /* LoginViewController.swift in Sources */,
 				097FF9A722D3B942005AA30D /* UIView+Extension.swift in Sources */,
 				09FC2F9B22C3111800E95078 /* Internet.swift in Sources */,
+				097875A022F1E8320049BDA2 /* RegisterViewModel.swift in Sources */,
 				09FC2FA222C3334F00E95078 /* NetWorkTools.swift in Sources */,
+				0948AC4D22EC10380027F392 /* MyRegister_ViewController.swift in Sources */,
 				091C5B8222E06EA90004F43A /* R.generated.swift in Sources */,
 				090061D822DD70B6000BED93 /* PictureEnlargementVC.swift in Sources */,
 				09F5FF9D22E866420066045B /* Home_ViewController.swift in Sources */,
 				09F5FFA522E867660066045B /* My_TabBar.swift in Sources */,
 				09FC2FAA22C37BD800E95078 /* Configs.swift in Sources */,
 				09C18C8E22D34F420086A212 /* Cache_Cell.swift in Sources */,
+				097875A222F1ECD30049BDA2 /* Service.swift in Sources */,
 				0978BC9522D0CEB300637456 /* KL_DynamicNineCell.swift in Sources */,
 				09F5FF9B22E866280066045B /* Video_ViewController.swift in Sources */,
 			);

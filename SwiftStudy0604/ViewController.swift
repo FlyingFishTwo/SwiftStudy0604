@@ -8,13 +8,10 @@
 
 import UIKit
 import Alamofire
-import RxCocoa
-import RxSwift
 
 
 let cellId = "cellID"
 class ViewController: Base_ViewController {
-    let disposeBag = DisposeBag()
 
     var nameString : String?
     let device_id = "6096495334"

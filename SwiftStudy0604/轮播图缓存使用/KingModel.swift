@@ -46,3 +46,26 @@ struct KingModel:HandyJSON {
     }
     
 }
+
+
+
+/*结构体动态绑定属性*******/
+struct NSObjcCategoriesKeys {
+    static var targetVaulekey : String = "targetVaulekey"
+}
+
+// static var targetVaulekey : String = "targetVaulekey"
+extension NSObject {
+    var targetVaule: String? {
+        set(newValue) {
+            objc_setAssociatedObject(self, &NSObjcCategoriesKeys.targetVaulekey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            // objc_setAssociatedObject(self, &targetVaulekey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+        get {
+            return  objc_getAssociatedObject(self, &NSObjcCategoriesKeys.targetVaulekey) as? String
+            //  return  objc_getAssociatedObject(self, &targetVaulekey) as? String
+        }
+    }
+}
+
+

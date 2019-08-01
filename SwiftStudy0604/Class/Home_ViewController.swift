@@ -33,7 +33,7 @@ class Home_ViewController: Base_ViewController {
         array.append("tableView缓存高度")
         array.append("轮播图_仿朋友圈")
         array.append("headimage放大")
-//        array.append("Realm使用")
+        array.append("RxSwift响应式编程")
         return array
     }()
     
@@ -106,16 +106,18 @@ extension Home_ViewController :UITableViewDelegate,UITableViewDataSource {
             self.navigationController?.pushViewController(pic_VC, animated: true)
             
         }
-//        else if indexPath.row == 6 {
-//            let Realm_VC = RealmViewController()
-//            Realm_VC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//            //            Realm_VC.title = stringArr[indexPath.row]
-//            self.navigationController?.pushViewController(Realm_VC, animated: true)
-//
-//        }
+        else if indexPath.row == 6 {
+            let RegisterVC = MyRegister_ViewController()
+            RegisterVC.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.navigationController?.pushViewController(RegisterVC, animated: true)
+
+        }
+        
+        
+        
+        
+        
     }
-    
-    
 }
 
 

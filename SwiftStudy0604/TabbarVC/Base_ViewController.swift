@@ -8,7 +8,10 @@
 
 import UIKit
 
+import RxSwift
+
 class Base_ViewController: UIViewController {
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,12 @@ class Base_ViewController: UIViewController {
     @objc func navigationBack(){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+
 
     
 }

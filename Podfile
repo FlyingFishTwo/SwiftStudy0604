@@ -13,6 +13,7 @@ pod 'Moya'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Result'
+pod 'NSObject+Rx'
 
 
 pod 'SnapKit'
@@ -46,7 +47,6 @@ pod 'JXCategoryView'
 pod 'JXSegmentedView'
 
 pod 'RxActivityIndicator'   # https://github.com/InsectQY/RxActivityIndicator
-pod 'NSObject+Rx'
 
 
 
