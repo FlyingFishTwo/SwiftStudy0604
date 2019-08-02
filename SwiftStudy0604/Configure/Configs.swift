@@ -8,8 +8,18 @@
 
 import UIKit
 
+// MARK: 配置项目全局刷新加载状态  Rx
+enum KingRefreshStatus {
+    case none
+    case beingHeaderRefresh
+    case endHeaderRefresh
+    case beingFooterRefresh
+    case endFooterRefresh
+    case noMoreData
+}
+
+
 struct Configs {
-    
     
     struct Dimensions {
         //屏宽
@@ -30,10 +40,25 @@ struct Configs {
 
         //CollectionView Item的最小间距
         static let minimum_Spacing: CGFloat = 3
-
-
         
-        
+    }
+    
+    /// Rx 全局调用刷新的方法
+    static func rsfresh_DataWith_TableView(tableView:UITableView,status:KingRefreshStatus) {
+        switch status {
+        case .beingHeaderRefresh:
+            tableView.mj_header.beginRefreshing()
+        case .endHeaderRefresh:
+            tableView.mj_header.endRefreshing()
+        case .beingFooterRefresh:
+            tableView.mj_footer.beginRefreshing()
+        case .endFooterRefresh:
+            tableView.mj_footer.endRefreshing()
+        case .noMoreData:
+            tableView.mj_footer.endRefreshingWithNoMoreData()
+        default:
+            break
+        }
     }
     
 }

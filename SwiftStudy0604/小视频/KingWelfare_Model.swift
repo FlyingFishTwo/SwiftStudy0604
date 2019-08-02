@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 import RxDataSources
 
+
 struct KingWelfare_Model : Mappable {
     
     var _id         = ""
@@ -21,6 +22,12 @@ struct KingWelfare_Model : Mappable {
     var url         = ""
     var used        = ""
     var who         = ""
+    /// 计算型属性  “敌不动我不动”
+    var createdAtString:String?{
+        return Date.getLocalDateFormateUTCDate(createdAt)
+    }
+    
+
     
     init?(map: Map) { }
     

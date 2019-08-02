@@ -28,6 +28,7 @@
 		097491DA22F31C3400245B3D /* King_Welfare_View_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491D922F31C3400245B3D /* King_Welfare_View_Model.swift */; };
 		097491DC22F3676300245B3D /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491DB22F3676300245B3D /* Response+ObjectMapper.swift */; };
 		097491DE22F3C8EC00245B3D /* Huoshan_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491DD22F3C8EC00245B3D /* Huoshan_Cell.swift */; };
+		097491E022F43AD100245B3D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491DF22F43AD100245B3D /* Date+Extension.swift */; };
 		0978759E22F1E3090049BDA2 /* ProtocolRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */; };
 		097875A022F1E8320049BDA2 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */; };
 		097875A222F1ECD30049BDA2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875A122F1ECD30049BDA2 /* Service.swift */; };
@@ -129,6 +130,7 @@
 		097491D922F31C3400245B3D /* King_Welfare_View_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_Welfare_View_Model.swift; sourceTree = "<group>"; };
 		097491DB22F3676300245B3D /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
 		097491DD22F3C8EC00245B3D /* Huoshan_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huoshan_Cell.swift; sourceTree = "<group>"; };
+		097491DF22F43AD100245B3D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolRegister.swift; sourceTree = "<group>"; };
 		0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		097875A122F1ECD30049BDA2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				09CDFE0422C4C15A00D9718D /* UIImage+Extension.swift */,
+				097491DF22F43AD100245B3D /* Date+Extension.swift */,
 				0932A6B122C87C92001CE760 /* String+Extension.swift */,
 				097FF9A622D3B942005AA30D /* UIView+Extension.swift */,
 				090061D922DD8B74000BED93 /* WGTableViewHeadView.swift */,
@@ -791,6 +794,7 @@
 				097875A622F2726D0049BDA2 /* LoginViewModel.swift in Sources */,
 				099E2F6E22DDD90300C000D5 /* RealmViewController.swift in Sources */,
 				0978BC7D22D07D5000637456 /* DynamicNinePalaceLatticeVC.swift in Sources */,
+				097491E022F43AD100245B3D /* Date+Extension.swift in Sources */,
 				098C477022D72A98004C7161 /* Banner_HeaderView.swift in Sources */,
 				0978759E22F1E3090049BDA2 /* ProtocolRegister.swift in Sources */,
 				09D62F7E22A5CA090061E661 /* ViewController.swift in Sources */,

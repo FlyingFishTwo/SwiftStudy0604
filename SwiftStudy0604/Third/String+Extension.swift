@@ -78,7 +78,7 @@ extension String {
         
         let options : NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         let boundingRect = string.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)),
-                                               options: options, attributes: [NSAttributedString.Key.font:UIFont(name: Configs.Dimensions.wordRegular, size: size)],
+                                               options: options, attributes: [NSAttributedString.Key.font:UIFont(name: Configs.Dimensions.wordRegular, size: size) ?? 13],
                                                        context: nil)
 
         return boundingRect.height

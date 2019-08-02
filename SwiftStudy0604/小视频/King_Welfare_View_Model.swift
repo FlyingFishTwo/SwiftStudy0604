@@ -12,14 +12,6 @@ import RxCocoa
 
 let disposeBag = DisposeBag()
 
-enum KingRefreshStatus {
-    case none
-    case beingHeaderRefresh
-    case endHeaderRefresh
-    case beingFooterRefresh
-    case endFooterRefresh
-    case noMoreData
-}
 
 class King_Welfare_View_Model {
     ///存放解析完成的模型数组
