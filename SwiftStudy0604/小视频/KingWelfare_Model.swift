@@ -44,12 +44,12 @@ struct KingWelfare_Model : Mappable {
 // MARK: SectionModel
 
 struct KingSection {
-    var items : [KingModel]
+    var items : [KingWelfare_Model]
     
 }
 
 extension KingSection :SectionModelType {
-    typealias Item = KingModel
+    typealias Item = KingWelfare_Model
     init(original: KingSection, items: [KingSection.Item]) {
         self = original
         self.items = items

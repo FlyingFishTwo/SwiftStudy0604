@@ -1,50 +1,48 @@
 PODS:
   - Alamofire (4.8.2)
-  - Differentiator (4.0.1)
-  - ETNavBarTransparent (1.1.2)
+  - Differentiator (3.1.0)
+  - ETNavBarTransparent (1.1.3)
   - FSPagerView (0.8.2)
   - HandyJSON (5.0.0)
   - IBAnimatable (6.0.0)
-  - JXCategoryView (1.3.14)
+  - JXCategoryView (1.3.16)
   - JXSegmentedView (0.0.19)
   - Kingfisher (4.10.1)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.2.0)
-  - Moya (13.0.0):
-    - Moya/Core (= 13.0.0)
-  - Moya/Core (13.0.0):
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
-  - "NSObject+Rx (5.0.0)":
-    - RxSwift (~> 5.0)
-  - ObjectMapper (3.5.0)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - ObjectMapper (3.5.1)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
-  - Realm (3.17.1):
-    - Realm/Headers (= 3.17.1)
-  - Realm/Headers (3.17.1)
-  - RealmSwift (3.17.1):
-    - Realm (= 3.17.1)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
   - Result (4.1.0)
   - Reusable (4.1.0):
     - Reusable/Storyboard (= 4.1.0)
     - Reusable/View (= 4.1.0)
   - Reusable/Storyboard (4.1.0)
   - Reusable/View (4.1.0)
-  - RxActivityIndicator (1.0.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxCocoa (5.0.0):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.0.0):
-    - RxSwift (~> 5)
-  - RxSwift (5.0.0)
+  - RxActivityIndicator (0.1.1):
+    - RxCocoa
+    - RxSwift
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
@@ -64,7 +62,7 @@ DEPENDENCIES:
   - Kingfisher
   - MBProgressHUD
   - MJRefresh
-  - Moya
+  - Moya/RxSwift
   - "NSObject+Rx"
   - ObjectMapper
   - R.swift
@@ -106,7 +104,6 @@ SPEC REPOS:
     - RxActivityIndicator
     - RxCocoa
     - RxDataSources
-    - RxRelay
     - RxSwift
     - SnapKit
     - SVProgressHUD
@@ -116,36 +113,35 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  ETNavBarTransparent: 0afd5a96a0bf07899b9140c585611d79ea6dbf96
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  ETNavBarTransparent: dd05fd593b31d5d786e05631149ceea1e13b30ef
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   IBAnimatable: d49f9fee0c401b5b08d31b77256b77fb067e0e92
-  JXCategoryView: 008a9d2eb3ba6035eb2df9a2b3e9a4806d6601a3
+  JXCategoryView: 037618624e69d6e28c0388a7cfd9851ebf041793
   JXSegmentedView: 6e22381bd1e6f0767fc078bef1947b13b2d337a1
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-  Moya: 161263550064ff8a4948e8ff63137fd72a876292
-  "NSObject+Rx": 6151a97d171f7187c4183746acc42d9451952a7b
-  ObjectMapper: 078b564ed25c6578b62588e306bf1da3924636d4
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
-  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
-  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
-  RxActivityIndicator: b337e29a8399d4c8dc250defaf5874221d9bd27e
-  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxActivityIndicator: 3ce24abf73d9608cad9925a3237397713d727bbe
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 8351d78069f566f54cad61ac0cf8825f3e1b66a5
+PODFILE CHECKSUM: 0efb01127514c6aee7b465dcff3d6c5810ac19e1
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.7.5

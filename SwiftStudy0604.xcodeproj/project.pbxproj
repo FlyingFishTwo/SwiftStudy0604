@@ -26,6 +26,8 @@
 		097491D622F319E500245B3D /* KingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491D522F319E500245B3D /* KingProgressHUD.swift */; };
 		097491D822F31A4200245B3D /* KingWelfare_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491D722F31A4200245B3D /* KingWelfare_Model.swift */; };
 		097491DA22F31C3400245B3D /* King_Welfare_View_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491D922F31C3400245B3D /* King_Welfare_View_Model.swift */; };
+		097491DC22F3676300245B3D /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491DB22F3676300245B3D /* Response+ObjectMapper.swift */; };
+		097491DE22F3C8EC00245B3D /* Huoshan_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097491DD22F3C8EC00245B3D /* Huoshan_Cell.swift */; };
 		0978759E22F1E3090049BDA2 /* ProtocolRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */; };
 		097875A022F1E8320049BDA2 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */; };
 		097875A222F1ECD30049BDA2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097875A122F1ECD30049BDA2 /* Service.swift */; };
@@ -125,6 +127,8 @@
 		097491D522F319E500245B3D /* KingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingProgressHUD.swift; sourceTree = "<group>"; };
 		097491D722F31A4200245B3D /* KingWelfare_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingWelfare_Model.swift; sourceTree = "<group>"; };
 		097491D922F31C3400245B3D /* King_Welfare_View_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_Welfare_View_Model.swift; sourceTree = "<group>"; };
+		097491DB22F3676300245B3D /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
+		097491DD22F3C8EC00245B3D /* Huoshan_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huoshan_Cell.swift; sourceTree = "<group>"; };
 		0978759D22F1E3090049BDA2 /* ProtocolRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolRegister.swift; sourceTree = "<group>"; };
 		0978759F22F1E8320049BDA2 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		097875A122F1ECD30049BDA2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				097491D522F319E500245B3D /* KingProgressHUD.swift */,
 				097491D722F31A4200245B3D /* KingWelfare_Model.swift */,
 				097491D922F31C3400245B3D /* King_Welfare_View_Model.swift */,
+				097491DD22F3C8EC00245B3D /* Huoshan_Cell.swift */,
+				097491DB22F3676300245B3D /* Response+ObjectMapper.swift */,
 			);
 			path = "小视频";
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 				091BBE1D22DE0EF80026964C /* Todo.swift in Sources */,
 				090061DA22DD8B74000BED93 /* WGTableViewHeadView.swift in Sources */,
 				09DD098F22D8563F004D8C56 /* King_FriendsCircleItem.swift in Sources */,
+				097491DE22F3C8EC00245B3D /* Huoshan_Cell.swift in Sources */,
 				09F6A42E22C0BFEC00FC6948 /* MyAPI.swift in Sources */,
 				09D5ADD122CA01B000D62790 /* CorcensCollection_Cell.swift in Sources */,
 				09732F0F22DC6F7100FB1E54 /* HJImageBrowser.swift in Sources */,
@@ -806,6 +813,7 @@
 				097491D622F319E500245B3D /* KingProgressHUD.swift in Sources */,
 				091C5B7A22E04DBD0004F43A /* Base_ViewController.swift in Sources */,
 				09DD099122D86217004D8C56 /* KingCell_HeightModel.swift in Sources */,
+				097491DC22F3676300245B3D /* Response+ObjectMapper.swift in Sources */,
 				09CDFDFB22C4529400D9718D /* CWLog.swift in Sources */,
 				0932A6AB22C85EED001CE760 /* CoinHomeViewController.swift in Sources */,
 				097875AB22F27C250049BDA2 /* LoginViewController.swift in Sources */,

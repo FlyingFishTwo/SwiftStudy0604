@@ -9,9 +9,12 @@ target 'SwiftStudy0604' do
 
 
 pod 'Alamofire'
-pod 'Moya'
+pod 'Moya/RxSwift'
 pod 'RxSwift'
 pod 'RxCocoa'
+
+pod 'RxDataSources'
+
 pod 'Result'
 pod 'NSObject+Rx'
 

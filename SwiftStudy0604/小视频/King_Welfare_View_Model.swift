@@ -23,7 +23,7 @@ enum KingRefreshStatus {
 
 class King_Welfare_View_Model {
     ///存放解析完成的模型数组
-    let models = BehaviorRelay<[KingModel]>(value: [])
+    let models = BehaviorRelay<[KingWelfare_Model]>(value: [])
     
     ///记录当前的索引值
     var index:Int = 1
@@ -64,11 +64,11 @@ extension King_Welfare_View_Model : KingViewModelType {
             return [KingSection(items: models)]
         }.asDriver(onErrorJustReturn: [])
         
+        ///定义输出
         let output = King_Output(sections: sections)
-        
+        /// 输出时订阅相关事件  刷新加载
         output.requestCommond.subscribe(onNext: { [unowned self] isReloadData in
             self.index = isReloadData ? 1 : self.index + 1
-
             ///请求数据
             NetworkProvider.rx.request(.data(type: input.category, size: 10, index: self.index))
                 .asObservable()
@@ -83,14 +83,10 @@ extension King_Welfare_View_Model : KingViewModelType {
                     case .completed:
                         output.refreshStatus.accept(isReloadData ? .endHeaderRefresh : .endFooterRefresh)
                     }
-                }).disposed(by: self.rx.disposeBag)
+                }).disposed(by: disposeBag)
         }).disposed(by: disposeBag)
-
-
-        
+        return output
     }
 
-    
-    
     
 }
