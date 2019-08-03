@@ -33,8 +33,11 @@ class MyRegister_ViewController: Base_ViewController {
         super.viewDidLoad()
         title = "注册"
         
-        let viewModel = RegisterViewModel()
+
         
+        
+        
+        let viewModel = RegisterViewModel()
         userNmaeTF.rx.text.orEmpty
         .bind(to: viewModel.username).disposed(by: disposeBag)
         passwordTF.rx.text.orEmpty

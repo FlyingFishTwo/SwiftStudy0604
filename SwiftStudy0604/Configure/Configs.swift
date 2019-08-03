@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import RxCocoa
+import RxSwift
 // MARK: 配置项目全局刷新加载状态  Rx
 enum KingRefreshStatus {
     case none
@@ -59,6 +60,17 @@ struct Configs {
         default:
             break
         }
+    }
+    /// 刷新或者加载
+    static func refresh_WithPublicSubject(tableView:UITableView,subject:PublishSubject<Bool>,isRefresh:Bool){
+        ///下拉刷新
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+            subject.onNext(isRefresh)
+        })
+        ///上拉加载
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {
+            subject.onNext(!isRefresh)
+        })
     }
     
 }

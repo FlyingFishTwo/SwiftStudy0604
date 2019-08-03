@@ -80,3 +80,20 @@ extension Reactive where Base: UIBarButtonItem {
         }
     }
 }
+// UILabel的拓展 字体大小
+extension UILabel {
+    public var fontSize: Binder<CGFloat> {
+        return Binder(self) { label, fontSize in
+            label.font = UIFont.systemFont(ofSize: fontSize)
+        }
+    }
+}
+
+// UILabel的拓展 字体大小 Reactive的扩展可以使用    rx.fontSize
+extension Reactive where Base: UILabel {
+    public var fontSize: Binder<CGFloat> {
+        return Binder(self.base) { label, fontSize in
+            label.font = UIFont.systemFont(ofSize: fontSize)
+        }
+    }
+}

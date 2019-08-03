@@ -51,6 +51,9 @@ struct KingWelfare_Model : Mappable {
 // MARK: SectionModel
 
 struct KingSection {
+    /// 多分区的时候可用到
+//    var header: String?
+
     var items : [KingWelfare_Model]
     
 }

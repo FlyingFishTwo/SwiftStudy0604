@@ -12,7 +12,7 @@ import RxCocoa
 
 let disposeBag = DisposeBag()
 
-
+// distinctUntilChanged()  去掉重复的Event
 class King_Welfare_View_Model {
     ///存放解析完成的模型数组
     let models = BehaviorRelay<[KingWelfare_Model]>(value: [])
@@ -61,8 +61,8 @@ extension King_Welfare_View_Model : KingViewModelType {
         /// 输出时订阅相关事件  刷新加载
         output.requestCommond.subscribe(onNext: { [unowned self] isReloadData in
             self.index = isReloadData ? 1 : self.index + 1
-            ///请求数据
-            NetworkProvider.rx.request(.data(type: input.category, size: 10, index: self.index))
+            ///请求数据  size 一次请求的个数
+            NetworkProvider.rx.request(.data(type: input.category, size: 20, index: self.index))
                 .asObservable()
                 .mapArray(KingWelfare_Model.self)
                 .subscribe({ [weak self] (event) in

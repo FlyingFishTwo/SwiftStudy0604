@@ -47,9 +47,6 @@ struct KingCell_HeightModel {
             headImageViewRect = CGRect.zero
             return
         }
-        //        guard model.images?.count == 0 else {
-        //            return
-        //        }
         
         // headerImageView的坐标
         let headImage_X: CGFloat = 15

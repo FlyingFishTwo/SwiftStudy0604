@@ -34,11 +34,9 @@ class Huoshan_ViewController: Base_ViewController {
         CWLog(item)
         return cell
     })
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "RxSwiftMVVM模式"
+        navigationItem.title = "RxSwift MVVM模式"
         addtableView()
         bindView()
         tableView.mj_header.beginRefreshing()
@@ -49,42 +47,34 @@ extension Huoshan_ViewController {
     fileprivate func bindView() {
         ///设置代理
         tableView.rx.setDelegate(self as UIScrollViewDelegate).disposed(by: rx.disposeBag)
-        ///初始化 Input  Output
+        ///初始化 Input  Output  这里配置了一个类型参数 category  如果界面上有segment 点击传入不同的参数，可以修改这个
+        ///如果有segment 这里的 vm_Input 要改成全局变量
         let vm_Input = King_Welfare_View_Model.king_Intput(category: .welfare)
         let vm_Output = viewModel.transform(input: vm_Input)
         ///任何 'Observable' 序列都可以被转换为'Driver', 只要他满足一下三点：
         /// 1.不能出错   2.观察主线程  3.共享资源
         vm_Output.sections.asDriver().drive(tableView.rx.items(dataSource: dataSources)).disposed(by: disposeBag)
-        
-        /// 创建一个被观察者，监听点击事件   zip相当于把两个序列合并成一个序列    同时获取索引 和 model
+        /// 创建一个被观察者，监听点击事件   zip相当于把两个序列合并成一个序列    同时获取索引 和 model   点击传值或者作别的处理
         Observable.zip(tableView.rx.itemSelected,
                        tableView.rx.modelSelected(KingWelfare_Model.self))
             .bind { [unowned self] indexpath, item in
                 self.showAlert(title: "点击了第 \(indexpath.row + 1) 行", message: "创建于 \(item.createdAtString ?? "2019年")")
             }.disposed(by: rx.disposeBag)
-
         ///配置刷新状态
         vm_Output.refreshStatus.asObservable().subscribe(onNext: { [unowned self] status in
             // MARK: 这里使用全局刷新状态，将刷新逻辑分离出去
             Configs.rsfresh_DataWith_TableView(tableView: self.tableView, status: status)
         }).disposed(by: disposeBag)
-        ///下拉刷新
-        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
-            vm_Output.requestCommond.onNext(true)
-        })
-        ///上拉加载
-        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {
-            vm_Output.requestCommond.onNext(false)
-        })
+        /// 分离 刷新加载业务判断
+        Configs.refresh_WithPublicSubject(tableView: tableView, subject: vm_Output.requestCommond, isRefresh: true)
     }
 }
-// MARK: cell的点击
+// MARK: cell的点击代理方法
 extension Huoshan_ViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
 // MARK: 添加界面控件
 extension Huoshan_ViewController {
     func addtableView() {
@@ -94,7 +84,7 @@ extension Huoshan_ViewController {
         }
     }
 }
-
+// MARK: 弹框提示
 extension Huoshan_ViewController {
     func showAlert(title:String,message:String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -102,6 +92,4 @@ extension Huoshan_ViewController {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-    
-    
 }
