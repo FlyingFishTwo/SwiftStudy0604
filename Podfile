@@ -14,9 +14,11 @@ pod 'RxSwift'
 pod 'RxCocoa'
 
 pod 'RxDataSources'
+pod 'RxSwiftX'
 
 pod 'Result'
 pod 'NSObject+Rx'
+pod 'IQKeyboardManagerSwift'
 
 
 pod 'SnapKit'
@@ -52,6 +54,7 @@ pod 'JXSegmentedView'
 pod 'RxActivityIndicator'   # https://github.com/InsectQY/RxActivityIndicator
 
 
+pod 'SwiftyBeaver' #Swift多彩日志记录
 
   target 'SwiftStudy0604Tests' do
     inherit! :search_paths

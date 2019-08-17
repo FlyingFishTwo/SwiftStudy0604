@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxSwiftX
 //import RxCocoa
 
 let minUsernameLength = 5
@@ -35,8 +36,9 @@ class MyRegister_ViewController: Base_ViewController {
         
 
         
-        
-        
+        userNmaeTF.maxLength = 11
+        passwordTF.maxLength = 6
+
         let viewModel = RegisterViewModel()
         userNmaeTF.rx.text.orEmpty
         .bind(to: viewModel.username).disposed(by: disposeBag)
